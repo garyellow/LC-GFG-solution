@@ -5,8 +5,7 @@ public:
         ::reverse(num.begin(), num.end());
         try {
             return x >= 0 ? stoi(num) : -stoi(num);
-        }
-        catch(exception) {
+        } catch(exception) {
             return 0;
         }
     }

@@ -12,10 +12,8 @@ public:
         int cnt = 0, ans = 0;
         for(auto &&i :nums)
         {
-            if(i == 1)
-                ans = max(ans, ++cnt);
-            else if(i > 1)
-                cnt = 0;
+            if(i == 1) ans = max(ans, ++cnt);
+            else if(i > 1) cnt = 0;
         }
         
         return ans + 1;

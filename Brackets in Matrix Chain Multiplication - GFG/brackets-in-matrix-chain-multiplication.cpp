@@ -10,7 +10,7 @@ using namespace std;
 class Solution{
 public:
     string matrixChainOrder(int p[], int n){
-        vector<vector<pair<long long, string>>> dp(n - 1, vector<pair<long long, string>>(n - 1, pair<long long, string>({0, ""})));
+        vector<vector<pair<int, string>>> dp(n - 1, vector<pair<int, string>>(n - 1));
         for(int i = 0; i < n - 1; i++)
             dp[i][i].second = 'A' + i;
         

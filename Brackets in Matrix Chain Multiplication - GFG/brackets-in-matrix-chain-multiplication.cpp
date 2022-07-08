@@ -14,10 +14,7 @@ public:
         for(int i = 0; i < n - 1; i++)
             dp[i][i].second = 'A' + i;
         
-        for(int i = 0; i < n - 2; i++)
-            dp[i][i + 1] = {p[i] * p[i + 1] * p[i + 2], string({'(', 'A' + i, 'A' + i + 1, ')'})};
-        
-        for(int step = 2; step < n - 1; step++)
+        for(int step = 1; step < n - 1; step++)
         {
             for(int start = 0; start + step < n - 1; start++)
             {

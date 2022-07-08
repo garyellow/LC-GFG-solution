@@ -31,8 +31,6 @@ public:
                 }
             }
         }
-        // for(int i = 0; i < n-1;i++)
-        //     cout << dp[0][i].second << endl;
         return dp[0][n - 2].second;
     }
 };

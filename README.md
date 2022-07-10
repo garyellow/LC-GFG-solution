@@ -1,2 +1,9 @@
-# leetcode-solution
-Collection of LeetCode questions to ace the coding interview! - Created using [LeetHub](https://github.com/QasimWani/LeetHub)
+# LC-GFG-solution
+## [LeetCode](https://leetcode.com/problemset/all/)
+Collection of LeetCode questions summit record.
+## [Geeks For Geeks](https://practice.geeksforgeeks.org/explore)
+Collection of Geeks For Geeks questions summit record.
+
+---
+### Build
+Created using [LeetHub](https://github.com/QasimWani/LeetHub).

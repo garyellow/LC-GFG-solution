@@ -10,7 +10,7 @@ public:
             sum += s;
         }
         
-        if(sum % 4 != 0) return false;
+        if(sum % 4 != 0 || cnt.rbegin()->first > sum / 4) return false;
         
         return trytry(cnt, cnt.rbegin(), sum, sum / 4, 0);
     }
@@ -23,7 +23,7 @@ public:
             {
                 it->second--;
                 cur += it->first;
-                if(cur == all && num == all)
+                if(cur == all)
                     return true;
                 else if(cur == num && trytry(cnt, cnt.rbegin(), all, num + all / 4, cur))
                     return true;

@@ -23,7 +23,7 @@ public:
             {
                 it->second--;
                 cur += it->first;
-                if(cur == num && num == all)
+                if(cur == all && num == all)
                     return true;
                 else if(cur == num && trytry(cnt, cnt.rbegin(), all, num + all / 4, cur))
                     return true;

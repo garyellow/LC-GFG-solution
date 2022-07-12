@@ -4,6 +4,7 @@ public:
     
     bool canPartition(vector<int>& nums) {
         int sum = accumulate(nums.begin(), nums.end(), 0);
+        sort(nums.begin(), nums.end(), greater<int>());
         
         if(sum & 1) return false;
         else return bt(nums, 0, 0, sum / 2);

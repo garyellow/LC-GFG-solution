@@ -16,16 +16,16 @@ public:
         for(auto &&i : preorder)
             record[i] = new TreeNode(i);
         
-        return buildTree(vector<int>(preorder), vector<int>(inorder));
+        return buildTree(preorder, inorder, 0, preorder.size(), 0, inorder.size());
     }
     
-    TreeNode* buildTree(vector<int>&& preorder, vector<int>&& inorder) {
-        if(inorder.empty()) return nullptr;
+    TreeNode* buildTree(vector<int>& preorder, vector<int>& inorder, int pre1, int pre2, int in1, int in2) {
+        if(in1 >= in2) return nullptr;
         
-        int n = find(inorder.begin(), inorder.end(), preorder.front()) - inorder.begin();
-        record[preorder.front()]->left = buildTree(vector<int>(preorder.begin() + 1, preorder.begin() + n + 1), vector<int>(inorder.begin(), inorder.begin() + n));
-        record[preorder.front()]->right = buildTree(vector<int>(preorder.begin() + n + 1, preorder.end()), vector<int>(inorder.begin() + n + 1, inorder.end()));
+        int n = find(inorder.begin() + in1, inorder.begin() + in2, preorder[pre1]) - (inorder.begin() + in1);
+        record[preorder[pre1]]->left = buildTree(preorder, inorder, pre1 + 1, pre1 + n + 1, in1, in1 + n);
+        record[preorder[pre1]]->right = buildTree(preorder, inorder, pre1 + n + 1, pre2, in1 + n + 1, in2);
         
-        return record[preorder.front()];
+        return record[preorder[pre1]];
     }
 };

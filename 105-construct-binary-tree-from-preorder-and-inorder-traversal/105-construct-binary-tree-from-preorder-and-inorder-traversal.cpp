@@ -11,7 +11,7 @@
  */
 class Solution {
 public:
-    unordered_map<int, TreeNode*> record;
+    map<int, TreeNode*> record;
     TreeNode* buildTree(vector<int>& preorder, vector<int>& inorder, int pre1 = 0, int pre2 = -1, int in1 = 0, int in2 = -1) {
         if(record.empty())
             for(auto &&i : preorder)

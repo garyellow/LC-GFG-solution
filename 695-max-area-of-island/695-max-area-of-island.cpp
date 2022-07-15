@@ -14,21 +14,17 @@ public:
     {
         int sum = 0;
         
-        try
+        if(grid[i][j])
         {
-            if(grid.at(i).at(j))
-            {
-                grid[i][j] = 0;
-                
-                sum += 1;
-                sum += DFS(grid, i - 1, j);
-                sum += DFS(grid, i + 1, j);
-                sum += DFS(grid, i, j - 1);
-                sum += DFS(grid, i, j + 1);
-            }
-        }
-        catch(exception) {}
+            grid[i][j] = 0;
             
+            sum += 1;
+            sum += i - 1 >= 0 ? DFS(grid, i - 1, j) : 0;
+            sum += i + 1 < grid.size() ? DFS(grid, i + 1, j) : 0;
+            sum += j - 1 >= 0 ? DFS(grid, i, j - 1) : 0;
+            sum += j + 1 < grid.front().size() ? DFS(grid, i, j + 1) : 0;
+        }
+        
         return sum;
     }
 };

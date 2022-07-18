@@ -11,7 +11,7 @@ public:
             for(int je = js; je < matrix.front().size(); je++)
             {
                 int sum = 0;
-                unordered_map<int, int> dp;
+                map<int, int> dp;
                 dp[0] = 1;                
                 for(int i = 0; i < matrix.size(); i++)
                 {

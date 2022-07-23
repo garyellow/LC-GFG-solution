@@ -13,17 +13,15 @@ public:
         return cnt;
     }
     
-    void mergeSort(int left, int right, vector<pair<int, int>>& arr, vector<int> &cnt)
+    vector<pair<int, int>> mergeSort(int left, int right, vector<pair<int, int>>& arr, vector<int> &cnt)
     {
         if(left >= right)
-            return;
+            return {arr.begin() + left, arr.begin() + right + 1};
         
         int mid = left + (right - left) / 2;
         
-        mergeSort(left, mid, arr, cnt);
-        auto a = vector<pair<int, int>>({arr.begin() + left, arr.begin() + mid + 1});
-        mergeSort(mid + 1, right, arr, cnt);
-        auto b = vector<pair<int, int>>({arr.begin() + mid + 1, arr.begin() + right + 1});
+        auto a = mergeSort(left, mid, arr, cnt);
+        auto b = mergeSort(mid + 1, right, arr, cnt);
         
         int num = mid + 1;
         merge(a.begin(), a.end(), b.begin(), b.end(), arr.begin() + left, [&cnt,&num,right](auto &l, auto &r){
@@ -38,5 +36,7 @@ public:
                 return false;
             }
         });
+        
+        return {arr.begin() + left, arr.begin() + right + 1};
     }
 };

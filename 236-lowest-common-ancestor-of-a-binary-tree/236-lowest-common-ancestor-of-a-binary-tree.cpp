@@ -10,33 +10,14 @@
 class Solution {
 public:
     TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
-        vector<TreeNode*> first, second; 
-        find(root, p, first);
-        find(root, q, second);
+        if (root == nullptr || root == p || root == q)
+            return root;
         
-        int i;
-        for(i = 0; i < min(first.size(), second.size()) && first[i] == second[i]; i++);
-        
-        return first[i - 1];
-    }
-    
-    bool find(TreeNode* root, TreeNode* &target, vector<TreeNode*> &before)
-    {
-        if(root)
-        {
-            before.push_back(root);
-            if(root == target)
-                return true;
-            else
-            {
-                if(find(root->left, target, before))
-                    return true;
-                if(find(root->right, target, before))
-                    return true;
-            }
-            before.pop_back();
-        }
-        
-        return false;
+        auto left = lowestCommonAncestor(root->left, p, q);
+        auto right = lowestCommonAncestor(root->right, p, q);
+
+        if(left == nullptr) return right;
+        else if(right == nullptr) return left;
+        else return root;
     }
 };

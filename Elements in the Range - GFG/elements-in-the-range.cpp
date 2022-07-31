@@ -4,8 +4,6 @@ using namespace std;
 
 // } Driver Code Ends
 class Solution{
-	
-	
 	public:
 	bool check_elements(int arr[], int n, int A, int B)
 	{
@@ -17,10 +15,6 @@ class Solution{
 		
 		return range.size() == B - A + 1;
 	}
-
-
-		 
-
 };
 	
 

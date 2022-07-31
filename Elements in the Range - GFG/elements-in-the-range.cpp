@@ -9,7 +9,7 @@ class Solution{
 	public:
 	bool check_elements(int arr[], int n, int A, int B)
 	{
-		set<int> range;
+		unordered_set<int> range;
 		
 		for(int i = 0; i < n; i++)
 		    if(arr[i] >= A && arr[i] <= B)

@@ -1,26 +1,30 @@
 class Solution {
 public:
     int kthSmallest(vector<vector<int>>& matrix, int k) {
-        priority_queue<pair<int, pair<int,int>>, vector<pair<int, pair<int,int>>>, greater<pair<int, pair<int,int>>>> pq;
-        pq.push({matrix[0][0], {0, 0}});
+        vector<vector<bool>> gone(matrix.size(), vector<bool>(matrix.front().size()));
+        
+        auto cmp = [&matrix](pair<int,int> &l, pair<int,int>&r) { return matrix[l.first][l.second] > matrix[r.first][r.second]; };
+        priority_queue<pair<int,int>, vector<pair<int,int>>, decltype(cmp)> pq(cmp);
+        pq.push({0, 0});
+        gone[0][0] = true;
         
         for(;--k ;)
         {
             auto temp = pq.top();
             pq.pop();
             
-            if(temp.second.first + 1 < matrix.size()) 
+            if(temp.first + 1 < matrix.size() && !gone[temp.first + 1][temp.second]) 
             {
-                pq.push({matrix[temp.second.first + 1][temp.second.second], {temp.second.first + 1, temp.second.second}});
-                matrix[temp.second.first + 1][temp.second.second] = INT_MAX;
+                pq.push({temp.first + 1, temp.second});
+                gone[temp.first + 1][temp.second] = true;
             }
-            if(temp.second.second + 1 < matrix.front().size())
+            if(temp.second + 1 < matrix.front().size() && !gone[temp.first][temp.second + 1])
             {
-                pq.push({matrix[temp.second.first][temp.second.second + 1], {temp.second.first, temp.second.second + 1}});
-                matrix[temp.second.first][temp.second.second + 1] = INT_MAX;
+                pq.push({temp.first, temp.second + 1});
+                gone[temp.first][temp.second + 1] = true;
             }
         }
                                                                        
-        return pq.top().first;
+        return matrix[pq.top().first][pq.top().second];
     }
 };

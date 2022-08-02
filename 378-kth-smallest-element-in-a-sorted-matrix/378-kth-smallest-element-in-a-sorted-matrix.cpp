@@ -3,7 +3,7 @@ public:
     int kthSmallest(vector<vector<int>>& matrix, int k) {
         vector<vector<bool>> gone(matrix.size(), vector<bool>(matrix.front().size()));
         
-        auto cmp = [&matrix](pair<int,int> &l, pair<int,int>&r) { return matrix[l.first][l.second] > matrix[r.first][r.second]; };
+        auto cmp = [&matrix](pair<int,int> &l, pair<int,int>&r) {return matrix[l.first][l.second] > matrix[r.first][r.second];};
         priority_queue<pair<int,int>, vector<pair<int,int>>, decltype(cmp)> pq(cmp);
         pq.push({0, 0});
         gone[0][0] = true;

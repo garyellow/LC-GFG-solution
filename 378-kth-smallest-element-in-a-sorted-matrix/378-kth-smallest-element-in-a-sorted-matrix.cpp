@@ -8,7 +8,7 @@ public:
         pq.push({0, 0});
         gone[0][0] = true;
         
-        for(;--k ;)
+        while(--k)
         {
             auto temp = pq.top();
             pq.pop();
@@ -18,6 +18,7 @@ public:
                 pq.push({temp.first + 1, temp.second});
                 gone[temp.first + 1][temp.second] = true;
             }
+            
             if(temp.second + 1 < matrix.front().size() && !gone[temp.first][temp.second + 1])
             {
                 pq.push({temp.first, temp.second + 1});

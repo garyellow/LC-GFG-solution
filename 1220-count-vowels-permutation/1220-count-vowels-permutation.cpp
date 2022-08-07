@@ -1,7 +1,7 @@
 class Solution {
 public:
     int countVowelPermutation(int n) {
-        vector<long> dp(5, 1);
+        array<long, 5> dp({1,1,1,1,1});
         
         while(--n)
         {

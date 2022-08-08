@@ -1,19 +1,16 @@
 class Solution {
 public:
     int lengthOfLIS(vector<int>& nums) {
-        map<int, int> dp;
+        vector<int> dp;
         
-        for(auto &&i : nums)
+        for(auto &&num : nums)
         {
-            for(auto &&cur :dp)
-            {
-                if(cur.first >= i) break;
-                else dp[i] = max(dp[i], cur.second + 1);
-            }
+            auto it = lower_bound(dp.begin(), dp.end(), num);
             
-            dp[i] = max(dp[i], 1);
+            if(it != dp.end()) *it = num;
+            else dp.push_back(num);
         }
         
-        return max_element(dp.begin(), dp.end(), [](auto &x, auto &y){ return x.second < y.second; })->second;
+        return dp.size();
     }
 };

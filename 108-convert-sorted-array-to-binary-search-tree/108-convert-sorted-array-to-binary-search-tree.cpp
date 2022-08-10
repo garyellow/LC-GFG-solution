@@ -11,12 +11,12 @@
  */
 class Solution {
 public:
-    TreeNode* sortedArrayToBST(vector<int>& nums) {
-        if(nums.size() == 0) return nullptr;
-        int half = nums.size() / 2;
+    TreeNode* sortedArrayToBST(vector<int>& nums, int start = -1, int end = -1) {
+        if(start >= 0 && start == end) return nullptr;
+        else if(start < 0) start = 0, end = nums.size();
         
-        vector<int> before(nums.begin(), nums.begin() + half);
-        vector<int> after(nums.begin() + half + 1, nums.end());
-        return new TreeNode(nums[half], sortedArrayToBST(before), sortedArrayToBST(after));
+        int half = (start + end) / 2;
+        
+        return new TreeNode(nums[half], sortedArrayToBST(nums, start, half), sortedArrayToBST(nums, half + 1, end));
     }
 };

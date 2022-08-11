@@ -13,9 +13,7 @@ class Solution {
 public:
     bool isValidBST(TreeNode* root, long small = INT64_MIN, long big = INT64_MAX) {
         if(root == nullptr) return true;
-        else if(root->val <= small || root->val >= big)
-            return false;
-        else 
-            return isValidBST(root->left, small, root->val) && isValidBST(root->right, root->val, big);
+        else if(root->val <= small || root->val >= big) return false;
+        else return isValidBST(root->left, small, root->val) && isValidBST(root->right, root->val, big);
     }
 };

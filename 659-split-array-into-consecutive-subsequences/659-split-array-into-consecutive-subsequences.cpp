@@ -12,7 +12,7 @@ public:
             int temp = cnt.begin()->second;
             
             int len = 0;
-            for(auto it = cnt.begin(); it != cnt.end(); it++)
+            for(auto it = cnt.begin(); it != cnt.end(); it++, len++)
             {
                 if(it->first - last <= 1 && it->second - temp >= 0)
                 {
@@ -23,8 +23,6 @@ public:
                         cnt.erase(it);
                 }
                 else break;
-                
-                len++;
             }
 
             if(len < 3) return false;

@@ -1,19 +1,22 @@
 class Solution {
 public:
-    set<vector<int>> all_ans;
+    static set<vector<int>> all_ans;
     Solution() {
-        for(long i = 1; i <= INT_MAX; i *= 2)
+        if(all_ans.empty())
         {
-            vector<int> temp(10);
-            int cur = i;
-            
-            while(cur)
+            for(long i = 1; i <= INT_MAX; i *= 2)
             {
-                temp[cur % 10]++;
-                cur /= 10;
+                vector<int> temp(10);
+                int cur = i;
+
+                while(cur)
+                {
+                    temp[cur % 10]++;
+                    cur /= 10;
+                }
+
+                all_ans.insert(temp);
             }
-            
-            all_ans.insert(temp);
         }
     }
     bool reorderedPowerOf2(int n) {
@@ -29,3 +32,5 @@ public:
         return all_ans.find(temp) != all_ans.end();
     }
 };
+
+set<vector<int>> Solution::all_ans;

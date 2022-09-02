@@ -11,31 +11,28 @@
  */
 class Solution {
 public:
-    vector<double> ans;
-    vector<int> cnt;
-    int max_depth = -1;
-    
     vector<double> averageOfLevels(TreeNode* root) {
-        if(root) 
-            next(root, 0);
+        vector<double> ans;
+        queue<TreeNode*> bfs({root});
         
-        for(int i = 0; i < ans.size(); i++)
-            ans[i] /= cnt[i];
-        
-        return ans;
-    }
-    
-    void next(TreeNode* now, int depth) {
-        if(depth > max_depth)
+        while(bfs.size())
         {
-            ans.push_back(0);
-            cnt.push_back(0);
-            max_depth = depth;
+            double cnt = 0;
+            int num = bfs.size();
+            
+            for(int n = num; n--;)
+            {
+                cnt += bfs.front()->val;
+                
+                if(bfs.front()->left) bfs.push(bfs.front()->left);
+                if(bfs.front()->right) bfs.push(bfs.front()->right);
+                
+                bfs.pop();
+            }
+            
+            ans.push_back(cnt / num);
         }
         
-        ans[depth] += now->val;
-        cnt[depth]++;
-        if(now->left) next(now->left, depth + 1);
-        if(now->right) next(now->right, depth + 1);
+        return ans;
     }
 };

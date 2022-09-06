@@ -12,8 +12,6 @@
 class Solution {
 public:
     TreeNode* pruneTree(TreeNode* root) {
-        // if(root == nullptr) return nullptr;
-        
         if(root->left) root->left = pruneTree(root->left);
         if(root->right) root->right = pruneTree(root->right);
         

@@ -18,12 +18,8 @@ public:
         {
             ans += to_string(root->val);
             
-            if(root->left)
-            {
-                ans += "(" + tree2str(root->left) + ")";
-                if(root->right)ans += "(" + tree2str(root->right) + ")";
-            }
-            else if(root->right) ans += "()(" + tree2str(root->right) + ")";
+            if(root->left || root->right) ans += "(" + tree2str(root->left) + ")";
+            if(root->right) ans += "(" + tree2str(root->right) + ")";
         }
         
         return ans;

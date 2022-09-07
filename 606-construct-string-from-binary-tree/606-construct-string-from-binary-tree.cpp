@@ -11,9 +11,7 @@
  */
 class Solution {
 public:
-    string tree2str(TreeNode* root) {
-        string ans;
-        
+    string tree2str(TreeNode* root, string&& ans = string()) {
         if(root)
         {
             ans += to_string(root->val);

@@ -5,7 +5,7 @@ public:
         dp[0] = 0;
         
         for(int j = 0; j < prices.size(); j++) {
-            for(int i = 0; i+2 <= 2*k; i += 2){
+            for(int i = 0; i + 2 <= 2 * k; i += 2){
                 dp[i + 1] = max(dp[i + 1], dp[i] - prices[j]);
                 dp[i + 2] = max(dp[i + 2], dp[i + 1] + prices[j]);
             }

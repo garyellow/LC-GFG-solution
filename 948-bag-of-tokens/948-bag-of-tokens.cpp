@@ -4,7 +4,6 @@ public:
         deque<int> q(tokens.begin(), tokens.end());
         
         sort(q.begin(), q.end());
-        
         int score = 0, ans = 0;
         
         while(q.size() && (power >= q.front() || score)) {

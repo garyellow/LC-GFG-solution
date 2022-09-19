@@ -26,13 +26,7 @@ public:
         for(auto &&[content, path] : record)
         {
             if(path.size() <= 1) continue;
-            
-            vector<string> temp;
-            
-            for(auto &&each : path)
-                temp.push_back(each);
-            
-            ans.push_back(temp);
+            ans.push_back(path);
         }
             
         

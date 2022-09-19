@@ -1,7 +1,7 @@
 class Solution {
 public:
     vector<vector<string>> findDuplicate(vector<string>& paths) {
-        map<string, vector<string>> record;
+        unordered_map<string, vector<string>> record;
         
         for(auto &&path : paths)
         {
@@ -14,10 +14,6 @@ public:
             }
             
             path = path.substr(forder.size() + 1, path.size() - forder.size());
-            
-            // cout << forder << endl << path << endl;
-            // for(auto &&[name, content] : spilt(path))
-            //     cout << name << ' ' << content << endl;
             
             auto file = spilt(path);
             

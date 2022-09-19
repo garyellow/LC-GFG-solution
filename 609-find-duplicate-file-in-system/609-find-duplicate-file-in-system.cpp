@@ -1,7 +1,7 @@
 class Solution {
 public:
     vector<vector<string>> findDuplicate(vector<string>& paths) {
-        unordered_map<string, vector<string>> record;
+        map<string, vector<string>> record;
         
         for(auto &&path : paths)
         {

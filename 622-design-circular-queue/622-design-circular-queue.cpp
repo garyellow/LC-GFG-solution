@@ -1,6 +1,8 @@
 class MyCircularQueue {
 public:
-    list<int> q;
+    ListNode* first = nullptr;
+    ListNode* last = nullptr;
+    int cnt = 0;
     int max_cnt;
     
     MyCircularQueue(int k) {
@@ -8,9 +10,12 @@ public:
     }
     
     bool enQueue(int value) {
-        if(q.size() < max_cnt)
+        if(cnt < max_cnt)
         {
-            q.push_back(value);
+            if(cnt == 0) first = last = new ListNode(value);
+            else last = last->next = new ListNode(value);
+            
+            cnt++;
             return true;
         }
         
@@ -18,9 +23,11 @@ public:
     }
     
     bool deQueue() {
-        if(q.size() > 0)
+        if(cnt > 0)
         {
-            q.pop_front();
+            first = first->next;
+            
+            cnt--;
             return true;
         }
         
@@ -28,19 +35,19 @@ public:
     }
     
     int Front() {
-        return q.size() ? q.front() : -1;
+        return cnt ? first->val : -1;
     }
     
     int Rear() {
-        return q.size() ? q.back() : -1;
+        return cnt ? last->val : -1;
     }
     
     bool isEmpty() {
-        return q.size() == 0;
+        return cnt == 0;
     }
     
     bool isFull() {
-        return q.size() == max_cnt;
+        return cnt == max_cnt;
     }
 };
 

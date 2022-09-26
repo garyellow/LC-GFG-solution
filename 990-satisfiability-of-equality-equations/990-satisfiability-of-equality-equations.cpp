@@ -1,6 +1,6 @@
 class Solution {
 public:
-    map<char, char> record;
+    unordered_map<char, char> record;
     bool equationsPossible(vector<string>& equations) {
         vector<bool> check(26);
         for(char i = 'a'; i <= 'z'; i++)

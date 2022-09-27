@@ -5,24 +5,12 @@ public:
         
         while(++i < dominoes.size())
         {
-            if(dominoes[i] == 'L')
-            {
-                while(j <= i)
-                    dominoes[j++] = 'L';
-            }
-            else if(dominoes[i] == 'R')
+            if(dominoes[i] == 'R')
             {
                 j = i;
-                while(++i <= dominoes.size())
+                while(++i < dominoes.size())
                 {
-                    if(i == dominoes.size() || dominoes[i] == 'R')
-                    {
-                        while(j < i)
-                            dominoes[j++] = 'R';
-                        
-                        if(i == dominoes.size()) break;
-                    }
-                    else if(dominoes[i] == 'L')
+                    if(dominoes[i] == 'L')
                     {
                         int temp = i;
                         
@@ -35,8 +23,18 @@ public:
                         j = i + 1;
                         break;
                     }
+                    else if(dominoes[i] == 'R')
+                        while(j < i)
+                            dominoes[j++] = 'R';
                 }
+                
+                if(i == dominoes.size())
+                    while(j < i)
+                        dominoes[j++] = 'R';
             }
+            else if(dominoes[i] == 'L')
+                while(j <= i)
+                    dominoes[j++] = 'L';
         }
         
         return dominoes;

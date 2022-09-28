@@ -14,8 +14,7 @@ public:
         int cnt = 0;
         
         auto temp = head;
-        while(temp)
-        {
+        while(temp) {
             cnt++;
             temp = temp->next;
         }

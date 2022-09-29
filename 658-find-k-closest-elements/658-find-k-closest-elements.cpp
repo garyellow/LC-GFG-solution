@@ -8,10 +8,8 @@ public:
         
         deque<int> temp;
         while(k--) {
-            if(heap.top().second <= temp.front())
-                temp.push_front(heap.top().second);
-            else
-                temp.push_back(heap.top().second);
+            if(heap.top().second <= temp.front()) temp.push_front(heap.top().second);
+            else temp.push_back(heap.top().second);
             
             heap.pop();
         }

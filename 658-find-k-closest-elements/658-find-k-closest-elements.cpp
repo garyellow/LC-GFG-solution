@@ -6,7 +6,7 @@ public:
         for(auto &&i : arr)
             heap.push({abs(i - x), i});
         
-        deque<int> temp;
+        list<int> temp;
         while(k--) {
             if(heap.top().second <= temp.front()) temp.push_front(heap.top().second);
             else temp.push_back(heap.top().second);

@@ -38,9 +38,8 @@ public:
                 }
                 else
                 {
-                    auto temp = heap.top()[2];
-                    while(heap.size() && heap.top()[2] <= temp)
-                        heap.pop();
+                    int temp = heap.top()[2];
+                    while(heap.size() && heap.top()[2] <= temp) heap.pop();
                     
                     if(heap.empty())
                     {

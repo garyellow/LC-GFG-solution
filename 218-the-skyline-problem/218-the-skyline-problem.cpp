@@ -1,10 +1,6 @@
 class Solution {
 public:
     vector<vector<int>> getSkyline(vector<vector<int>>& buildings) {
-        // stable_sort(buildings.begin(), buildings.end(), [](auto& x, auto &y){return x[2] > y[2];});
-        // stable_sort(buildings.begin(), buildings.end(), [](auto& x, auto &y){return x[1] < y[1];});
-        // stable_sort(buildings.begin(), buildings.end(), [](auto& x, auto &y){return x[0] < y[0];});
-        
         for(auto &&building : buildings) {
             swap(building[2], building[1]);
             swap(building[1], building[0]);

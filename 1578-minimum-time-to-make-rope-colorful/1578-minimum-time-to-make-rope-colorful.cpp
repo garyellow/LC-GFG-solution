@@ -6,13 +6,11 @@ public:
         char last = 0;
         int sum = 0, max_cost = 0;
         for(int i = 0; i < colors.size(); i++) {
-            if(colors[i] == last)
-            {
+            if(colors[i] == last) {
                 sum += neededTime[i];
                 max_cost = max(max_cost, neededTime[i]);
             }
-            else
-            {
+            else {
                 cost += sum - max_cost;
                 sum = neededTime[i];
                 max_cost = neededTime[i];

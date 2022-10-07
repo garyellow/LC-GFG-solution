@@ -1,22 +1,22 @@
 class TimeMap {
 public:
-    vector<pair<pair<int,string>,string>>vp;
-TimeMap() {
-    
-}
+    vector<tuple<int, string, string>> data;
+    TimeMap() {
 
-void set(string key, string value, int timestamp) {
-    vp.push_back({{timestamp,value},key});
-}
-
-string get(string key, int timestamp) {
-    for(int i=vp.size()-1;i>=0;i--){
-        if(vp[i].second==key && vp[i].first.first<=timestamp){
-            return vp[i].first.second;
-        }
     }
-    return "";
-}
+
+    void set(string key, string value, int timestamp) {
+        data.push_back({timestamp, value, key});
+    }
+
+    string get(string key, int timestamp) {
+        for(int i = data.size() - 1; i >= 0;i--){
+            if(std::get<2>(data[i]) == key && std::get<0>(data[i]) <= timestamp){
+                return std::get<1>(data[i]);
+            }
+        }
+        return "";
+    }
 };
 
 /**

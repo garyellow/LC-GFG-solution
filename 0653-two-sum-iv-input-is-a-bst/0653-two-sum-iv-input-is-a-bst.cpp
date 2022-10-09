@@ -27,5 +27,5 @@ public:
         return false;
     }
 
-    set<int> hash;
+    unordered_set<int> hash;
 };

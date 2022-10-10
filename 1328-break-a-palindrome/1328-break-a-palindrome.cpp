@@ -4,7 +4,7 @@ public:
         if(palindrome.size() == 1) return "";
         
         for(int i = 0; i < palindrome.size(); i++) {
-            if(palindrome[i] != 'a' && (((palindrome.size() & 1) == 0) || (i != palindrome.size() / 2))) {
+            if(palindrome[i] != 'a' && (!(palindrome.size() & 1) || (i != palindrome.size() / 2))) {
                 palindrome[i] = 'a';
                 return palindrome;
             }

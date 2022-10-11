@@ -8,9 +8,9 @@ public:
         {
             if(num <= x) x = num;
             else if(num <= y) y = num;
-            else if(num <= z) z = num;
+            else if(num <= z) return true;
         }
         
-        return z != INT_MAX + 1L;
+        return false;
     }
 };

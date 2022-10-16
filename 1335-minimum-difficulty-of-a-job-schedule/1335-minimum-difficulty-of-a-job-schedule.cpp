@@ -3,8 +3,7 @@ public:
     vector<vector<int>> dp;
     int minDifficulty(vector<int>& jobDifficulty, int d) {
         if(jobDifficulty.size() < d) return -1;
-        dp = vector<vector<int>>(jobDifficulty.size() + 1, vector<int>(d + 1, -1));
-        int save = dfs(0, d, jobDifficulty);
+        dp = vector<vector<int>>(jobDifficulty.size(), vector<int>(d + 1, -1));
         
         return dfs(0, d, jobDifficulty);
     }
@@ -12,12 +11,7 @@ public:
     int dfs(int last_cut, int remain, vector<int>& jobDifficulty) {
         if(dp[last_cut][remain] >= 0) return dp[last_cut][remain];
         else if(remain == 1) {
-            int max_num = 0;
-            for(int i = last_cut; i < jobDifficulty.size(); i++) {
-                max_num = max(max_num, jobDifficulty[i]);
-            }
-            
-            return dp[last_cut][remain] = max_num;
+            return dp[last_cut][remain] = *max_element(jobDifficulty.begin() + last_cut, jobDifficulty.end());
         }
         else {
             int max_num = 0;

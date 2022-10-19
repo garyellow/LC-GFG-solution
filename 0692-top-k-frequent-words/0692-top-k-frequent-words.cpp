@@ -1,7 +1,7 @@
 class Solution {
 public:
     vector<string> topKFrequent(vector<string>& words, int k) {
-        unordered_map<string, int> record;
+        map<string, int> record;
         
         for(auto &&word : words) {
             record[word]++;

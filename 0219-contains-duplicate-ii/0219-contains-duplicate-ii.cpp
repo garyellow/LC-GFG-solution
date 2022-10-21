@@ -4,7 +4,7 @@ public:
         unordered_map<int, int> record;
         
         for(int i = 0; i < nums.size(); i++) {
-            if(record.count(nums[i]) && i - record[nums[i]] <= k) return true;
+            if(record.find(nums[i]) != record.end() && i - record[nums[i]] <= k) return true;
             record[nums[i]] = i;
         }
         

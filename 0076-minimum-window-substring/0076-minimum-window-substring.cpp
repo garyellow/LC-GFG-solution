@@ -14,16 +14,12 @@ public:
         while(right <= s.size()) {
             if(check(table, cur)) {
                 auto temp = s.substr(left, right - left);
-                // cout << temp << endl;
                 if(ans.size() == 0 || ans.size() > temp.size()) ans = temp;
-                cur[s[left]]--;
-                left++;
+                cur[s[left++]]--;
             } 
             else {
                 if(right == s.size()) break;
-                
-                cur[s[right]]++;
-                right++;
+                cur[s[right++]]++;
             }
         }
         

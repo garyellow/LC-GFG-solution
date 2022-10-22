@@ -27,7 +27,7 @@ public:
     }
     
     bool check(unordered_map<char, int> &table, unordered_map<char, int>&cur) {
-        for(auto [ch, time] : table)
+        for(auto &&[ch, time] : table)
             if(cur[ch] < time) return false;
         
         return true;

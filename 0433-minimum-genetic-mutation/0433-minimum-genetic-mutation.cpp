@@ -19,8 +19,8 @@ public:
                         if(x[j] != g) {
                             x[j] = g;
                             
-                             
-                            if(record.find(x) != record.end()) {
+                            auto it = record.find(x);
+                            if(it != record.end()) {
                                 if(x == end) return i;
                                 
                                 bfs.push(x);

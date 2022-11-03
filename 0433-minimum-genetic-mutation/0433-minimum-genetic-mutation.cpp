@@ -1,25 +1,37 @@
 class Solution {
 public:
-    int minMutation(string start, string end, vector<string>& b) {
-    map<string,int> dist;
-    dist[start] = 0;
-    queue<string> q;
-    q.push(start);
-    while (q.size()) {
-        auto u = q.front(); q.pop();
-        for (auto &&v : b) {
-            if (dist.count(v)) continue;
-            int cnt = 0;
-            for (int i = 0; i < 8; i++) 
-                if (u[i] != v[i]) cnt++;
-            
-            if (cnt == 1) {
-                dist[v] = dist[u] + 1;
-                q.push(v);
+    int minMutation(string start, string end, vector<string>& bank) {
+        set<string> record;
+        for(auto &&s : bank)
+            record.insert(s);
+        
+        queue<string> bfs({start});
+        string gene = "ACGT";
+        
+        for(int i = 1; bfs.size(); i++) {
+            for(int n = bfs.size(); n--; ) {
+                auto temp = bfs.front();
+                bfs.pop();
+                
+                for(int j = 0; j < temp.size(); j++) {
+                    auto x = temp;
+                    for(auto &&g : gene) {
+                        if(x[j] != g) {
+                            x[j] = g;
+                            
+                             
+                            if(record.find(x) != record.end()) {
+                                if(x == end) return i;
+                                
+                                bfs.push(x);
+                                record.erase(x);
+                            }
+                        }
+                    }
+                }
             }
         }
+        
+        return -1;
     }
-    if (dist.count(end)) return dist[end];
-    else return -1;
-  }
 };

@@ -13,8 +13,9 @@ public:
         return s;
     }
     
-    bool is_vowel(const char& c) {
-        string check = "aeiouAEIOU";
+    bool is_vowel(char c) {
+        c = tolower(c);
+        string check = "aeiou";
         
         for(auto &&ch : check)
             if(ch == c)

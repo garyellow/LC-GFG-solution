@@ -8,11 +8,9 @@ public:
                 pos.insert(word.substr(0, i));
         
         string temp;
-        for(int i = 0; i < board.size(); i++) {
-            for(int j = 0; j < board.front().size(); j++) {
+        for(int i = 0; i < board.size(); i++)
+            for(int j = 0; j < board.front().size(); j++)
                 bt(temp, i, j, board);
-            }
-        }
         
         vector<string> ans;
         for(auto &&word : words)

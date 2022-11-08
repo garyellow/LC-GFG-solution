@@ -7,8 +7,7 @@ public:
                 s.erase(s.begin() + i - 1);
                 i = max(i - 1, 1);
             }
-            else
-                i++;
+            else i++;
         }
         
         return s;

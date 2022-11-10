@@ -1,15 +1,12 @@
 class Solution {
 public:
     string removeDuplicates(string s) {
-        for(int i = 1; s.size() > 1 && i < s.size();) {
-            if(s[i] == s[i - 1]) {
-                s.erase(s.begin() + i - 1);
-                s.erase(s.begin() + i - 1);
-                i = max(i - 1, 1);
-            }
-            else i++;
+        string str;
+        for(auto &&c : s) {
+            if(str.size() && str.back() == c) str.pop_back();
+            else str.push_back(c);
         }
         
-        return s;
+        return str;
     }
 };

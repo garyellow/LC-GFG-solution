@@ -31,10 +31,7 @@ public:
     }
     
     double findMedian() {
-        if((big.size() + small.size()) & 1)
-            return big.top();
-        else
-            return (big.top() + small.top()) / 2.0;
+        return ((big.size() + small.size()) & 1) ? big.top() : (big.top() + small.top()) / 2.0;
     }
 };
 

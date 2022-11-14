@@ -1,24 +1,23 @@
 class Solution {
 public:
-    map<vector<int>, vector<int>> u;
-        
+    map<int, int> u;
     int removeStones(vector<vector<int>>& stones) {
         for(auto &&stone : stones) 
-            u[stone] = stone;
+            u[stone.front() * 1e4 + stone.back()] = stone.front() * 1e4 + stone.back();
         
         for(auto &&stone1 : stones) 
             for(auto &&stone2 : stones) 
                 if(stone1.front() == stone2.front() || stone1.back() == stone2.back())
-                    u[find(stone1)] = find(stone2);
+                    u[find(stone1.front() * 1e4 + stone1.back())] = find(stone2.front() * 1e4 + stone2.back());
         
-        set<vector<int>> ans;
+        set<int> ans;
         for(auto &&[x, y] : u) 
             ans.insert(find(y));
         
         return stones.size() - ans.size();
     }
     
-    vector<int> find(vector<int> &val) {
+    int find(const int &val) {
         return u[val] == val ? val : u[val] = find(u[val]);
     }
 };

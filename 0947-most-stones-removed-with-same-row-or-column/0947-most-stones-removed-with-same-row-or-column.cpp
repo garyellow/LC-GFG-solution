@@ -1,6 +1,6 @@
 class Solution {
 public:
-    map<int, int> u;
+    unordered_map<int, int> u;
     int removeStones(vector<vector<int>>& stones) {
         for(auto &&stone : stones) 
             u[stone.front() * 1e4 + stone.back()] = stone.front() * 1e4 + stone.back();
@@ -10,7 +10,7 @@ public:
                 if(stone1.front() == stone2.front() || stone1.back() == stone2.back())
                     u[find(stone1.front() * 1e4 + stone1.back())] = find(stone2.front() * 1e4 + stone2.back());
         
-        set<int> ans;
+        unordered_set<int> ans;
         for(auto &&[x, y] : u) 
             ans.insert(find(y));
         

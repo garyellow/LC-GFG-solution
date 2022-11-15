@@ -11,14 +11,11 @@
  */
 class Solution {
 public:
-    int countNodes(TreeNode* root) {
-        int l, r;
-        
-        auto cur = root;
-        for(l = 0; cur; cur = cur->left, l++); 
-        for(r = 0, cur = root; cur; cur = cur->right, r++); 
+    int countNodes(TreeNode* root, int l = 0, int r = 0) {
+        if(l == 0) for(auto cur = root; cur; cur = cur->left, l++);
+        if(r == 0) for(auto cur = root; cur; cur = cur->right, r++); 
         
         if(l == r) return pow(2, l) - 1;
-        else return 1 + countNodes(root->left) + countNodes(root->right);
+        else return 1 + countNodes(root->left, l - 1, 0) + countNodes(root->right, 0, r - 1);
     }
 };

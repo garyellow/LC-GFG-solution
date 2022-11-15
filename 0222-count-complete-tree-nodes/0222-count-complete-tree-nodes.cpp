@@ -12,6 +12,17 @@
 class Solution {
 public:
     int countNodes(TreeNode* root) {
-        return root ? 1 + countNodes(root->left) + countNodes(root->right) : 0;
+        int l, r;
+        
+        auto cur = root;
+        for(l = 0; cur; cur = cur->left) 
+            l++;
+        
+        cur = root;
+        for(r = 0; cur; cur = cur->right) 
+            r++;
+        
+        if(l == r) return pow(2, l) - 1;
+        else return 1 + countNodes(root->left) + countNodes(root->right);
     }
 };

@@ -6,29 +6,32 @@ public:
         long current_val = 0, sign = 1; 
        
         for (auto &&c : s) { 
-            if (isdigit(c)) {
-                current_val = 10 * current_val + c - '0'; 
-            } else if(c == '+') {
-                answer += current_val * sign; 
-                current_val = 0;
-                sign = 1;   
-            } else if(c == '-') {
-                answer += current_val * sign; 
-                current_val = 0; 
-                sign = -1; 
-            } else if(c == '(') {
-                nums.push(answer);    
-                nums.push(sign); 
-                answer = 0; 
-                sign=1;
-            } else if(c == ')') { 
-                answer += current_val * sign; 
-                current_val = 0;
-                
-                answer = answer * nums.top();
-                nums.pop();
-                answer = answer + nums.top();
-                nums.pop();
+            if (isdigit(c)) current_val = 10 * current_val + c - '0';
+            else {
+                switch(c) {
+                    case '(':
+                        nums.push(answer);    
+                        nums.push(sign); 
+                        answer = 0; 
+                        sign = 1;
+                        break;
+                        
+                    case ')':
+                        answer += current_val * sign; 
+                        current_val = 0;
+
+                        answer = answer * nums.top();
+                        nums.pop();
+                        answer = answer + nums.top();
+                        nums.pop();
+                        break;
+                        
+                    case '+': case '-':
+                        answer += current_val * sign; 
+                        current_val = 0;
+                        
+                        sign = c == '+' ? 1 : -1;
+                }
             }
         }
         

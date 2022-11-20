@@ -2,8 +2,8 @@ class Solution {
 public:
     int calculate(string s) {
         stack<int> nums; 
-        int answer = 0; 
-        long current_val = 0, sign = 1; 
+        int answer = 0, sign = 1;
+        long current_val = 0;
        
         for (auto &&c : s) { 
             if (isdigit(c)) current_val = 10 * current_val + c - '0';

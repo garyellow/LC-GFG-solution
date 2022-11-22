@@ -5,9 +5,8 @@ public:
         if(n == 0 || dp[n]) return dp[n];
             
         int temp = INT_MAX;
-        for(int i = 100; i > 0; i--)
-            if(n - i * i >= 0)
-                temp = min(temp, 1 + numSquares(n - i * i));
+        for(int i = 1; n - i * i >= 0; i++)
+            temp = min(temp, 1 + numSquares(n - i * i));
         
         return dp[n] = temp;
     }

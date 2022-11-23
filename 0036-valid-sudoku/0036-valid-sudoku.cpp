@@ -1,7 +1,7 @@
 class Solution {
 public:
     bool isValidSudoku(vector<vector<char>>& board) {
-        vector<vector<set<char>>> record = vector<vector<set<char>>>(3, vector<set<char>>(board.size()));
+        vector<vector<unordered_set<char>>> record = vector<vector<unordered_set<char>>>(3, vector<unordered_set<char>>(board.size()));
         
         for(int i = 0; i < board.size(); i++) {
             for(int j = 0; j < board.front().size(); j++) {

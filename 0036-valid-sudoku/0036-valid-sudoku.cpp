@@ -13,7 +13,7 @@ public:
                 if(record[1][j].find(board[i][j]) == record[1][j].end()) record[1][j].insert(board[i][j]);
                 else return false;
                 
-                int &&k = i / 3 * 3 + j / 3;
+                int k = i / 3 * 3 + j / 3;
                 if(record[2][k].find(board[i][j]) == record[2][k].end()) record[2][k].insert(board[i][j]);
                 else return false;
             }

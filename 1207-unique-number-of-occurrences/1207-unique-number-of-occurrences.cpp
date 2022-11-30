@@ -8,9 +8,8 @@ public:
             hash[num]++;
         
         for(auto &&[num, time] : hash)
-            if(times.count(time)) return false;
-            else times.insert(time);
+            times.insert(time);
         
-        return true;
+        return hash.size() == times.size();
     }
 };

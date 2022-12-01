@@ -1,6 +1,6 @@
 class Solution {
 public:
-    bool halvesAreAlike(string s) {
+    bool halvesAreAlike(string &s) {
         string vowels = "aeiouAEIOU";
         auto cmp = [&vowels](char &val){
             for(auto &&vowel : vowels)

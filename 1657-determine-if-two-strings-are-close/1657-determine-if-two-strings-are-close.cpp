@@ -11,12 +11,12 @@ public:
         for(auto &&c : word2)
             hash2[c]++;
         
-        for(auto &&[c, time] : hash1){
+        for(auto &&[c, time] : hash1) {
             char1.insert(c);
             times1[time]++;
         }
         
-        for(auto &&[c, time] : hash2){
+        for(auto &&[c, time] : hash2) {
             char2.insert(c);
             times2[time]++;
         }

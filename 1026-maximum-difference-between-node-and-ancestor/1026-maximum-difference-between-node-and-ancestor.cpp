@@ -24,8 +24,8 @@ public:
 
         if (!root->left && !root->right)
         {
-            auto x = minmax_element(record.begin(), record.end());
-            max_dif = max(max_dif, (int)abs(*x.first - *x.second));
+            auto [x, y] = minmax_element(record.begin(), record.end());
+            max_dif = max(max_dif, (int)abs(*x - *y));
         }
 
         record.pop_back();

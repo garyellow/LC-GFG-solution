@@ -15,18 +15,17 @@ public:
     int mid = INT_MAX;
     int maxProduct(TreeNode* root) {
         int sum = add(root);
-        
         find(root, sum / 2.0);
         
         return (1L * mid * (sum - mid)) % int(1e9 + 7);
     }
     
-    int add(TreeNode* root) {
+    int add(TreeNode* &root) {
         if(!root) return 0;
         else return root->val + add(root->left) + add(root->right);
     }
     
-    int find(TreeNode* root, double sum) {
+    int find(TreeNode* &root, const double &sum) {
         if(!root) return 0;
         
         int cnt = root->val + find(root->left, sum) + find(root->right, sum);

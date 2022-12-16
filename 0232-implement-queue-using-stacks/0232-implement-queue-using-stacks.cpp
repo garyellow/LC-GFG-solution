@@ -6,34 +6,29 @@ public:
     }
     
     void push(int x) {
-        s.push(x);
-    }
-    
-    int pop() {
         stack<int> temp;
-        while(s.size() > 1){
+        while(s.size()){
             temp.push(s.top());
             s.pop();
         }
         
-        int x = s.top();
-        s.pop();
+        s.push(x);
         
         while(temp.size()){
             s.push(temp.top());
             temp.pop();
         }
+    }
+    
+    int pop() {
+        int x = s.top();
+        s.pop();
         
         return x;
     }
     
     int peek() {
-        stack<int> temp = s;
-        while(temp.size() > 1){
-            temp.pop();
-        }
-        
-        return temp.top();
+        return s.top();
     }
     
     bool empty() {

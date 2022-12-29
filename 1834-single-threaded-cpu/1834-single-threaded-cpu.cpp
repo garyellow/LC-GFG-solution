@@ -17,21 +17,19 @@ public:
             }
             
             if(heap.size()) {
-                auto [pt, id] = heap.top();
-                heap.pop();
+                auto &&[pt, id] = heap.top();
                 
                 time += pt;
                 ans.push_back(id);
+                
+                heap.pop();
             }
-            else {
+            else 
                 time = tasks[index].front();
-            }
         }
         
-        while(heap.size()) {
+        for(; heap.size(); heap.pop())
             ans.push_back(heap.top().second);
-            heap.pop();
-        }
         
         return ans;
     }

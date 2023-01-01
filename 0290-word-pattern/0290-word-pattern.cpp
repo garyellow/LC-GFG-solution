@@ -2,8 +2,8 @@ class Solution {
 public:
     bool wordPattern(string pattern, string s) {
         vector<string> S = decode(s);
-        map<string, char> hash1;
-        map<char, string> hash2;
+        unordered_map<string, char> hash1;
+        unordered_map<char, string> hash2;
         
         if(S.size() != pattern.size()) return false;
         

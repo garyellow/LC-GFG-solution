@@ -1,6 +1,6 @@
 class Solution {
 public:
-    bool detectCapitalUse(string word)
+    bool detectCapitalUse(string &word)
     {
         int lower = count_if(word.begin(), word.end(), [](int x){return islower(x);});
 

@@ -14,6 +14,7 @@ public:
                 }
             }
         }
+        
         return delete_count;
     }
 };

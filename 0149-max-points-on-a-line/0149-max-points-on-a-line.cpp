@@ -1,7 +1,7 @@
 class Solution {
 public:
     int maxPoints(vector<vector<int>>& points) {
-        sort(points.begin(), points.end());
+        // sort(points.begin(), points.end());
         
         int ans = 1;
         for(int i = 0; i < points.size(); i++) {
@@ -17,7 +17,7 @@ public:
             }
             
             if(record.size())
-                ans = max(ans, max_element(record.begin(), record.end(), [](auto &x, auto &y){return x.second < y.second;})->second + 1);
+                ans = max(ans, max_element(record.begin(), record.end(), [](auto &&x, auto &&y){return x.second < y.second;})->second + 1);
         }
         
         return ans;

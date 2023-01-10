@@ -14,21 +14,11 @@ class Solution
 public:
     bool isSameTree(TreeNode *p, TreeNode *q)
     {
-        vector<int> a, b;
-        DFS(p, a);
-        DFS(q, b);
-        return a == b;
-    }
-
-    void DFS(TreeNode *root, vector<int> &v)
-    {
-        if (root)
-        {
-            v.push_back(root->val);
-            DFS(root->left, v);
-            DFS(root->right, v);
-        }
-        else
-            v.push_back(-1);
+        if(p == nullptr && q == nullptr)
+            return true;
+        else if(p == nullptr || q == nullptr || p->val != q->val)
+            return false;
+        else 
+            return isSameTree(p->left, q->left) && isSameTree(p->right, q->right);
     }
 };

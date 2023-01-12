@@ -1,7 +1,7 @@
 class Solution {
 public:
     int minTime(int n, vector<vector<int>>& edges, vector<bool>& hasApple) {
-        unordered_map<int, vector<int>> graph;
+        vector<vector<int>> graph(n);
         vector<bool> is_gone(n, false);
         
         for(auto &&edge : edges) {
@@ -12,7 +12,7 @@ public:
         return max(0, get_apple(0, is_gone, hasApple, graph) - 2);
     }
     
-    int get_apple(int cur, vector<bool>& is_gone, vector<bool>& hasApple, unordered_map<int, vector<int>>& graph) {
+    int get_apple(int cur, vector<bool>& is_gone, vector<bool>& hasApple, vector<vector<int>>& graph) {
         is_gone[cur] = true;
         
         int cnt = 0;
@@ -21,8 +21,6 @@ public:
                 cnt += get_apple(next, is_gone, hasApple, graph);
             }
         }
-        
-        // cout << cur << ' ' << hasApple[cur] << ' ' << cnt << endl;
         
         bool check = (hasApple[cur] || cnt);
         

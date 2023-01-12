@@ -10,18 +10,17 @@ public:
         }
         
         vector<int> ans(n);
-        dfs(0, ans, is_gone, graph, labels);
+        dfs(0, -1, ans, graph, labels);
         
         return ans;
     }
     
-    vector<int> dfs(int cur, vector<int>& ans, vector<bool>& is_gone, vector<vector<int>>& graph, string& labels) {
-        is_gone[cur] = true;
+    vector<int> dfs(int cur, int last, vector<int>& ans, vector<vector<int>>& graph, string& labels) {
         vector<int> cnt(128);
         
         for(auto &&next : graph[cur]) {
-            if(!is_gone[next]) {
-                vector<int> temp = dfs(next, ans, is_gone, graph, labels);
+            if(next != last) {
+                vector<int> temp = dfs(next, cur, ans, graph, labels);
                 
                 for(int i = 0; i < temp.size(); i++)
                     cnt[i] += temp[i];

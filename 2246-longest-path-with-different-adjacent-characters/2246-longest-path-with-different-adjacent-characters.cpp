@@ -18,7 +18,7 @@ public:
         for(auto &&next : graph[cur])
         {
             int len = dfs(s, next, ans, graph);
-            ans = max(ans , len);
+            ans = max(ans, len);
             
             if(s[cur] == s[next]) continue;
             
@@ -26,7 +26,7 @@ public:
                 mx2 = mx1;
                 mx1 = len;
             }
-            else mx2 = max(mx2 , len);
+            else mx2 = max(mx2, len);
         }
         
         ans = max(ans, 1 + mx1 + mx2);

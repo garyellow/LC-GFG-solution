@@ -2,8 +2,8 @@ class Solution {
 public:
     bool detectCapitalUse(string &word)
     {
-        int lower = count_if(word.begin(), word.end(), [](int x){return islower(x);});
+        int upper = count_if(word.begin(), word.end(), [](int x){return isupper(x);});
 
-        return lower == 0 || lower == word.size() || (lower == word.size() - 1 && isupper(word.front()));
+        return upper == 0 || upper == word.size() || (upper == 1 && isupper(word.front()));
     }
 };

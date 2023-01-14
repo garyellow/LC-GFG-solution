@@ -14,9 +14,6 @@ public:
     
     int dfs(string &s, int cur, int& ans, vector<vector<int>>& graph)
     {
-        if(graph[cur].empty())
-            return 1;
-        
         int mx1 = 0, mx2 = 0;
         for(auto &&next : graph[cur])
         {

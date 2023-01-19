@@ -1,20 +1,19 @@
 class Solution {
 public:
     int subarraysDivByK(vector<int>& nums, int k) {
-        nums.front() = (nums.front() % k + k) % k;
-        
-        for(int i = 1; i < nums.size(); i++)
-            nums[i] = ((nums[i] + nums[i - 1]) % k + k) % k;
-        
         vector<int> cnt(k);
-        for(auto &&num : nums)
-            cnt[num]++;
         
-        int ans = 0;
-        for(auto &&num : nums) {
-            if(!num) ans++;
-            ans += --cnt[num];
+        nums[0] = (nums[0] % k + k) % k;
+        cnt[nums[0]]++;
+        
+        for(int i = 1; i < nums.size(); i++) {
+            nums[i] = ((nums[i] + nums[i - 1]) % k + k) % k;
+            cnt[nums[i]]++;
         }
+        
+        int ans = cnt[0];
+        for(auto &&num : nums)
+            ans += --cnt[num];
         
         return ans;
     }

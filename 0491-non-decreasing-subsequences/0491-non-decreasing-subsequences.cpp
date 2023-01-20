@@ -13,7 +13,7 @@ public:
         if(cur.size() >= 2) ans.insert(cur);
         
         for(int i = index + 1; i < nums.size(); i++) {
-            if(index == -1 || nums[i] >= nums[index]) {
+            if(cur.empty() || nums[i] >= cur.back()) {
                 cur.push_back(nums[i]);
                 backtracking(i, cur, nums);
                 cur.pop_back();

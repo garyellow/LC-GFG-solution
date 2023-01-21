@@ -8,7 +8,7 @@ public:
         return ans;
     }
     
-    void backtracking(int index, vector<string>& cur, string& s) {
+    void backtracking(int&& index, vector<string>& cur, string& s) {
         if(cur.size() > 4) return;
         if(cur.size() == 4 && index == s.size()) {
             for(auto &&str : cur)

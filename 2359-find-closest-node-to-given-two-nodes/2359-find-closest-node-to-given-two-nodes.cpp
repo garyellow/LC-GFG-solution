@@ -7,13 +7,13 @@ public:
     }
 
     int closestMeetingNode(vector<int>& edges, int node1, int node2) {
-        int res = -1, min_dist = INT_MAX, n = edges.size();
+        int res = -1, min_dist = INT_MAX;
         
-        vector<int> dist1(n, -1), dist2(n, -1);
+        vector<int> dist1(edges.size(), -1), dist2(edges.size(), -1);
         dfs(node1, edges, dist1);
         dfs(node2, edges, dist2);
 
-        for (int i = 0; i < n; ++i) {
+        for (int i = 0; i < edges.size(); ++i) {
             if (min(dist1[i], dist2[i]) >= 0 && max(dist1[i], dist2[i]) < min_dist) {
                 min_dist = max(dist1[i], dist2[i]);
                 res = i;

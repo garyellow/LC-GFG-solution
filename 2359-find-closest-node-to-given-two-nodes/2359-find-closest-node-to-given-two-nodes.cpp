@@ -13,7 +13,7 @@ public:
         dfs(node1, edges, dist1);
         dfs(node2, edges, dist2);
 
-        for (int i = 0; i < edges.size(); ++i) {
+        for (int i = 0; i < edges.size(); i++) {
             if (min(dist1[i], dist2[i]) >= 0 && max(dist1[i], dist2[i]) < min_dist) {
                 min_dist = max(dist1[i], dist2[i]);
                 res = i;

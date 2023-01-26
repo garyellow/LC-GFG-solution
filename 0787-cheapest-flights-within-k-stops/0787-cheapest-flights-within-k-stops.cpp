@@ -10,7 +10,7 @@ public:
         vector<int> dp(n, INT_MAX);
         dp[src] = 0;
         
-        for(int step = 1; step <= k + 1; step++) {
+        for(int step = 0; step <= k; step++) {
             vector<int> dp2 = dp;
             
             for(int i = 0; i < n; i++) {

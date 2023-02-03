@@ -7,16 +7,10 @@ public:
         int index = 0;
         bool zigzag = true; 
         for(auto &&ch : s) {
-            if(zigzag) {
-                datas[index++].push_back(ch);
-                
-                if(index == numRows - 1) zigzag = !zigzag;
-            }
-            else {
-                datas[index--].push_back(ch);
-                
-                if(index == 0) zigzag = !zigzag;
-            }
+            if(zigzag) datas[index++].push_back(ch);
+            else datas[index--].push_back(ch);
+            
+            if(index == 0 || index == numRows - 1) zigzag = !zigzag;
         }
         
         return accumulate(datas.begin(), datas.end(), string());

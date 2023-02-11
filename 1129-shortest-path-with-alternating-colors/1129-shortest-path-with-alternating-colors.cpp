@@ -3,14 +3,11 @@ public:
     vector<int> shortestAlternatingPaths(int n, vector<vector<int>>& redEdges, vector<vector<int>>& blueEdges) {
         vector<vector<vector<int>>> path(2, vector<vector<int>>(n));
         
-        for(auto &&edge : redEdges) {
+        for(auto &&edge : redEdges) 
             path[1][edge.front()].push_back(edge.back());
-        }
-        
-        
-        for(auto &&edge : blueEdges) {
+
+        for(auto &&edge : blueEdges) 
             path[0][edge.front()].push_back(edge.back());
-        }
         
         vector<vector<bool>> is_gone(2, vector<bool>(n));
         is_gone.front().front() = true;

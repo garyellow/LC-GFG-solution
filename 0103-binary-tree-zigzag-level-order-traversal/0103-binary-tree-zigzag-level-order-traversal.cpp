@@ -29,12 +29,8 @@ public:
                 if(temp->right) bfs.push(temp->right);
             }
             
-            if(level & 1) {
-                ans.push_back(cur);
-            } 
-            else {
-                ans.push_back({cur.rbegin(), cur.rend()});
-            }
+            if(level & 1) ans.push_back(cur);
+            else ans.push_back({cur.rbegin(), cur.rend()});
         }
         
         return ans;

@@ -8,14 +8,8 @@ public:
                 int index = (l + r) / 2;
                 index -= index & 1;
 
-                if(nums[index] != nums[index + 1]) {
-                    r = index;
-                }
-                else {
-                    l = index + 2;
-                }
-
-                // cout << l << ' ' << r << endl;
+                if(nums[index] != nums[index + 1]) r = index;
+                else l = index + 2;
             }
         }
         

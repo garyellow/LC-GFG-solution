@@ -56,7 +56,7 @@ public:
             br = combine(x + n / 2, y + n / 2, n / 2, grid);
             
             if(tl->isLeaf && tr->isLeaf && bl->isLeaf && br->isLeaf && tl->val == tr->val && tr->val == bl->val && bl->val == br->val) {
-                // delete tl, tr, bl, br;
+                delete tl, tr, bl, br;
                 return new Node(grid[x][y], true);
             }
             else {

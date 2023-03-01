@@ -1,20 +1,13 @@
 class Solution {
 public:
     vector<int> sortArray(vector<int>& nums) {
-        map<int, int> hash;
+        priority_queue<int> heap(nums.begin(), nums.end());
         
-        for(auto &&num : nums) {
-            hash[num]++;
+        while(heap.size()) {
+            nums[heap.size() - 1] = heap.top();
+            heap.pop();
         }
         
-        vector<int> ans;
-        
-        for(auto &&[num, cnt] : hash) {
-            while(cnt--) {
-                ans.push_back(num);
-            }
-        }
-        
-        return ans;
+        return nums;
     }
 };

@@ -2,7 +2,7 @@ class Solution
 {
 public:
     queue<int> bfs = queue<int>({0});
-    map<int, vector<int>> gate;
+    unordered_map<int, vector<int>> gate;
     vector<bool> Is_gone = vector<bool>({true});
 
     int minJumps(vector<int> &arr) {

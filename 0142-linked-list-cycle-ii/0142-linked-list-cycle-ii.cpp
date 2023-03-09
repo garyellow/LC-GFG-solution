@@ -13,6 +13,6 @@ public:
             if(hash.count(head) > 0) return head;
             else hash.insert(head);
         
-        return NULL;
+        return nullptr;
     }
 };

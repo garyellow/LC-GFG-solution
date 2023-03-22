@@ -13,11 +13,9 @@ public:
         }
         
         int ans = INT_MAX;
-        for(int i = 1; i <= n; i++) {
-            if(find(i, u) == find(n, u)) {
+        for(int i = 1; i <= n; i++)
+            if(find(i, u) == find(n, u))
                 ans = min(ans, m[i]);
-            }
-        }
         
         return ans;
     }

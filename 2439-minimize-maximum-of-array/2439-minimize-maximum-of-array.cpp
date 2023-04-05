@@ -6,7 +6,7 @@ public:
         
         for (int index = 0; index < nums.size(); index++) {
             sum += nums[index];
-            result = max(result, (sum + index) / (index + 1));
+            result = max(result, long(ceil(1.0 * sum / (index + 1))));
         }
         
         return result;

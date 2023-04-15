@@ -10,7 +10,7 @@ public:
         if (i == piles.size() || k == 0) return 0;
         
         int res = cal(i + 1, k, piles, dp), cur = 0;
-        for (int j = 0; j < piles[i].size() && j < k; j++) {
+        for (int j = 0; j < min(piles[i].size(), (unsigned long)k); j++) {
             cur += piles[i][j];
             res = max(res, cal(i + 1, k - j - 1, piles, dp) + cur);
         }

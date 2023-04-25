@@ -15,9 +15,7 @@ public:
             
             return temp;
         }
-        else {
-            return cur++;
-        }
+        else return cur++;
     }
     
     void addBack(int num) {

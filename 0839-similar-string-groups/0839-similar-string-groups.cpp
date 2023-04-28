@@ -11,9 +11,8 @@ public:
                 for(int k = 0; k < strs.front().size(); k++)
                     cnt += (strs[i][k] != strs[j][k]);
                 
-                if(cnt == 0 || cnt == 2) {
+                if(cnt == 0 || cnt == 2)
                     u[find(strs[i], u)] = find(strs[j], u);
-                }
             }
         }
         

@@ -37,7 +37,7 @@ public:
         return (a == n - 1 && b == n - 1) ? r : -1;
     }
     
-    int find(int val, vector<int> &u) {
+    inline int find(int val, vector<int> &u) {
         return u[val] == val ? val : u[val] = find(u[val], u);
     }
 };

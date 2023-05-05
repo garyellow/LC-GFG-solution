@@ -8,7 +8,7 @@ public:
         for(auto &&p : senate)
             s.push(p);
         
-        while(abs(skip) < 1e4) {
+        while(abs(skip) < senate.size()) {
             auto i = s.front();
             s.pop();
             

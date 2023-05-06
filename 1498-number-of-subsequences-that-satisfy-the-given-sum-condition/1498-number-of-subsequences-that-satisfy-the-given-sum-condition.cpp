@@ -18,7 +18,7 @@ public:
         int r = nums.size() - 1;
         while (l <= r) {
             if (nums[l] + nums[r] <= target) {
-                ans = ans + pow[r - l] % int(1e9 + 7);
+                ans = (ans + pow[r - l]) % int(1e9 + 7);
                 l++;
             } 
             else r--;

@@ -12,7 +12,7 @@ public:
     }
     
     long check(int cur, vector<int> &dp, int zero, int one) {
-        if(cur < 0 || cur >= dp.size()) return 0;
+        if(cur < 0) return 0;
         else if(dp[cur] == -1) dp[cur] = (check(cur - zero, dp, zero, one) + check(cur - one, dp, zero, one)) % int(1e9 + 7);
         
         return dp[cur];

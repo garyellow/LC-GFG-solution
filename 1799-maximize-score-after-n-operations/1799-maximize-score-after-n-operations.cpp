@@ -3,7 +3,6 @@ public:
     int maxScore(vector<int>& nums) {
         vector<int> dp(1 << 14, -1);
 
-        int m = nums.size(), n = nums.size()/2;
         vector<vector<int>> g(nums.size(), vector<int>(nums.size()));
         for(int i = 0; i < nums.size(); i++)
             for(int j = i + 1; j < nums.size(); j++)
@@ -13,13 +12,12 @@ public:
     }
     
     int func(vector<int>& nums, int op, int mask, vector<int>& dp, vector<vector<int>>& g){
-        int m = nums.size(), n = nums.size() / 2;
-        if(op > n) return 0;
+        if(op > nums.size() / 2) return 0;
         if(dp[mask] != -1) return dp[mask];
 
-        for(int i = 0; i < m; i++){
+        for(int i = 0; i < nums.size(); i++){
             if(mask & (1<<i)) continue;
-            for(int j = i + 1; j < m; j++){
+            for(int j = i + 1; j < nums.size(); j++){
                 if(mask & (1<<j)) continue;
                 
                 int newMask = (1<<i) | (1<<j) | mask;

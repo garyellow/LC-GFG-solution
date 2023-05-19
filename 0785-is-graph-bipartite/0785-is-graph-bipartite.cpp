@@ -11,14 +11,14 @@ public:
         }
         
         
-        set<int> cnt;
+        unordered_set<int> cnt;
         for(auto &&i : u) cnt.insert(find(i));
         
         for(auto &&i : cnt)
             if(graph[i].size() && find(graph[i].front()) == i)
                 return false;
 
-        return ((cnt.size() - zero) & 1) == 0;
+        return !((cnt.size() - zero) % 2);
     }
     
     int find(int val) {

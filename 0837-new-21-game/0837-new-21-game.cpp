@@ -4,8 +4,8 @@ public:
         if (k == 0 || n >= k + maxPts) return 1;
         
         vector<double> dp(n + 1);
-        double sum = 1.0;
-        double ans = 0.0;
+        double sum = 1;
+        double ans = 0;
 
         dp[0] = 1;
 

@@ -32,7 +32,6 @@ public:
         
         for(auto &&next : g[cur]) {
             if(!isGone[next]) {
-                cout << cur << ' ' << next << endl;
                 isGone[next] = true;
                 cnt += detonate(next, isGone, g);
             }

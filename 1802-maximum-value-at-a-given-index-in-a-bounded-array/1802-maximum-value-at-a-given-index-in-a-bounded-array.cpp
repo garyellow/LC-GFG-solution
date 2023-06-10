@@ -18,17 +18,11 @@ public:
         
         long sum = target;
         
-        cout << sum << ' ';
-        
         if(x <= target - 1) sum += ((target - 1) + (target - x)) * x / 2;
         else sum += ((target - 1) + 1) * (target - 1) / 2 + x - target + 1;
         
-        cout << sum << ' ';
-        
         if(y <= target - 1) sum += ((target - 1) + (target - y)) * y / 2;
         else sum += ((target - 1) + 1) * (target - 1) / 2 + y - target + 1;
-        
-        cout << sum << ' ';
         
         cout << (sum <= maxSum) << endl;
         

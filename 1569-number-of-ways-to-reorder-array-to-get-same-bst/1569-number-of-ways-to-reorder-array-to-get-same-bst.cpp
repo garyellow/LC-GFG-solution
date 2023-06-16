@@ -23,14 +23,16 @@ public:
         return (leftCount * rightCount % int(1e9 + 7) * totalCount % int(1e9 + 7));
     }
 
+    vector<vector<long long>> dp = vector<vector<long long>>(1001, vector<long long>(1001));
     long long binomialCoefficient(int n, int k) {
-        vector<vector<long long>> dp(n + 1, vector<long long>(k + 1, 0));
-        dp[0][0] = 1;
+        if(!dp[n][k]) {
+            dp[0][0] = 1;
 
-        for (int i = 1; i <= n; i++) {
-            dp[i][0] = 1;
-            for (int j = 1; j <= min(i, k); j++) {
-                dp[i][j] = (dp[i - 1][j - 1] + dp[i - 1][j]) % int(1e9 + 7);
+            for (int i = 1; i <= n; i++) {
+                dp[i][0] = 1;
+                for (int j = 1; j <= min(i, k); j++) {
+                    dp[i][j] = (dp[i - 1][j - 1] + dp[i - 1][j]) % int(1e9 + 7);
+                }
             }
         }
 

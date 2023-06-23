@@ -8,10 +8,10 @@ public:
             for(int last = 0; last < cur; last++) {
                 int d = nums[cur] - nums[last];
                 
-                ans = max(ans, dp[cur][d] = dp[last][d] + 1);
+                ans = max(ans, dp[cur][d] = dp[last].count(d) ? dp[last][d] + 1 : 2);
             }
         }
         
-        return ans + 1;
+        return ans;
     }
 };

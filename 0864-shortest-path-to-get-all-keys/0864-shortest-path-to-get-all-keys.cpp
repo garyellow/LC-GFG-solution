@@ -1,12 +1,11 @@
-struct bfs{
+struct bfs {
     int x;
     int y;
-    set<char> key;
+    unordered_set<char> key;
     int length;
 };
 
-class Solution
-{
+class Solution {
 public:
     int shortestPathAllKeys(vector<string> &grid) {
         max_i = grid.size();
@@ -93,7 +92,7 @@ public:
         return -1;
     }
 
-    bool check_cango(const int &x, const int &y, const set<char> &key) {
+    bool check_cango(int x, int y, unordered_set<char> &key) {
         if (x < 0 || x >= max_i)
             return false;
         if (y < 0 || y >= max_j)
@@ -105,7 +104,7 @@ public:
         return go_map[x][y] != 1;
     }
 
-    unsigned long hash(const bfs &temp) {
+    unsigned long hash(bfs &temp) {
         unsigned long num = 0;
         num += temp.x;
         num += temp.y * 100;

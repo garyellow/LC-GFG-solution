@@ -1,7 +1,6 @@
 class Solution {
 public:
     int longestSubarray(vector<int>& nums) {
-        if(accumulate(nums.begin(), nums.end(), 0) == nums.size()) return nums.size() - 1;
         nums.push_back(0);
         
         queue<int> q({-1});
@@ -16,6 +15,7 @@ public:
             }
         }
         
+        ans = max(ans, int(nums.size()) - q.front() - 3);
         return ans;
     }
 };

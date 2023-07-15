@@ -3,7 +3,7 @@ public:
     int maxValue(vector<vector<int>>& events, int k) {
         sort(events.begin(), events.end());
         
-        vector<vector<int>> dp(events.size() + 1, vector<int>(k + 1, -1));
+        vector<vector<int>> dp(events.size(), vector<int>(k + 1, -1));
         
         return helper(0, dp, events, k);
     }

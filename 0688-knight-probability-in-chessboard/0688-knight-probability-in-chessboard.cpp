@@ -20,8 +20,6 @@ public:
         
         return dp[row][column][k];
     }
-    
-    double helper(int n, int cur, int row, int column);
 };
 
 vector<pair<int, int>> Solution::next = vector<pair<int, int>>({{1, 2}, {2, 1}, {2, -1}, {1, -2}, {-1, -2}, {-2, -1}, {-2, 1}, {-1, 2}});

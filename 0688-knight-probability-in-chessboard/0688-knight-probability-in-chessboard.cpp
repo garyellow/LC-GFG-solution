@@ -7,8 +7,8 @@ public:
             dp = vector<vector<vector<double>>>(n, vector<vector<double>>(n, vector<double>(k + 1, -1)));
         }
         
-        if(k == 0) return row >= 0 && column >= 0 && row < n && column < n;
         if(row < 0 || column < 0 || row >= n || column >= n) return 0;
+        if(k == 0) return row >= 0 && column >= 0 && row < n && column < n;
         
         if(dp[row][column][k] == -1) {
             dp[row][column][k] = 0;

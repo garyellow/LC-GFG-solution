@@ -8,7 +8,7 @@ public:
         }
         
         if(row < 0 || column < 0 || row >= n || column >= n) return 0;
-        if(k == 0) return row >= 0 && column >= 0 && row < n && column < n;
+        if(k == 0) return 1;
         
         if(!dp[row][column][k]) {
             for(auto &&[dx, dy]: next) {

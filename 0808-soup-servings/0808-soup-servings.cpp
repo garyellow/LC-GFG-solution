@@ -4,7 +4,6 @@ public:
     Solution() {
         if(dp.empty()) {
             dp = vector<vector<double>>(201, vector<double>(201, -1));
-            helper(200, 200, dp);
         }
     }
     

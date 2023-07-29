@@ -1,10 +1,17 @@
 class Solution {
 public:
+    static vector<vector<double>> dp;
+    Solution() {
+        if(dp.empty()) {
+            dp = vector<vector<double>>(201, vector<double>(201, -1));
+            helper(200, 200, dp);
+        }
+    }
+    
     double soupServings(int n) {
         if(n >= 5000) return 1;
         
         n = ceil(n / 25.0);
-        vector<vector<double>> dp(n + 1, vector<double>(n + 1, -1));
         
         return helper(n, n, dp);
     }
@@ -28,3 +35,5 @@ public:
         return dp[a][b];
     }
 };
+
+vector<vector<double>> Solution::dp;

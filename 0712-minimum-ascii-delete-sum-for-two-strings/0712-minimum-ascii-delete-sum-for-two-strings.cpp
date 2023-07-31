@@ -1,6 +1,6 @@
 class Solution {
 public:
-    int minimumDeleteSum(string s1, string s2) {
+    int minimumDeleteSum(string &s1, string &s2) {
         vector<vector<int>> dp(s1.size(), vector<int>(s2.size(), INT_MAX));
         
         return helper(0, 0, s1, s2, dp);
@@ -15,13 +15,8 @@ public:
         }
         
         if(dp[i][j] == INT_MAX) {
-            int temp = INT_MAX;
-            
-            temp = min(temp, s1[i] + helper(i + 1, j, s1, s2, dp));
-            temp = min(temp, s2[j] + helper(i, j + 1, s1, s2, dp));
-            if(s1[i] == s2[j]) temp = min(temp, helper(i + 1, j + 1, s1, s2, dp));
-            
-            dp[i][j] = temp;
+            dp[i][j] = min(s1[i] + helper(i + 1, j, s1, s2, dp), s2[j] + helper(i, j + 1, s1, s2, dp));
+            if(s1[i] == s2[j]) dp[i][j] = min(dp[i][j], helper(i + 1, j + 1, s1, s2, dp));
         }
         
         return dp[i][j];

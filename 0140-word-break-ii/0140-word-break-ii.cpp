@@ -9,18 +9,15 @@ public:
         return dp.front(); 
     }
     
-    bool dfs(int cur, string &s, unordered_set<string> &hash, vector<bool> &isGone, vector<vector<string>> &dp) {
-        if(cur == s.size()) {
-            return true;
-        }
-        
+    void dfs(int cur, string &s, unordered_set<string> &hash, vector<bool> &isGone, vector<vector<string>> &dp) {
         if(!isGone[cur]) {
             for(int i = 1; cur + i <= s.size(); i++) {
                 if(hash.count(s.substr(cur, i))) {
                     if(cur + i == s.size()) {
                         dp[cur].push_back(s.substr(cur, i));
                     }
-                    else if(dfs(cur + i, s, hash, isGone, dp)) {
+                    else {
+                        dfs(cur + i, s, hash, isGone, dp);
                         for(auto &&str: dp[cur + i]) {
                             dp[cur].push_back(s.substr(cur, i) + ' ' + str);
                         }
@@ -30,6 +27,5 @@ public:
         }
         
         isGone[cur] = true;
-        return dp[cur].size();
     }
 };

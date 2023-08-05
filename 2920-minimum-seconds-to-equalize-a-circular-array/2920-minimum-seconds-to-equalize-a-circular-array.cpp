@@ -8,7 +8,7 @@ public:
         unordered_map<int, int> last;
         unordered_map<int, int> dp;
         
-        for(int i = 0; i < nums.size() ; i++) {
+        for(int i = 0; i < nums.size(); i++) {
             if(last.count(nums[i])) {
                 dp[nums[i]] = max(dp[nums[i]], i - last[nums[i]]);
             }
@@ -23,6 +23,6 @@ public:
             }
         }
         
-        return floor(mi / 2.0);
+        return mi / 2;
     }
 };

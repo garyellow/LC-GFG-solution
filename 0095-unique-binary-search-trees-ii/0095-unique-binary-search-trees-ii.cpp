@@ -24,28 +24,12 @@ public:
                 for(int r = 1; r <= i; r++) {
                     int left = r - 1, right = i - r;
                     
-                    if(left == 0) {
-                        for(auto &&rnode : dp[right]) {
-                            TreeNode *root = new TreeNode(r);
-                            root->right = helper(rnode, r, i);
-                            temp.push_back(root);
-                        }
-                    }
-                    else if(right == 0) {
-                        for(auto &&lnode : dp[left]) {
+                    for(auto &&lnode : dp[left].size() ? dp[left] : vector<TreeNode*>({nullptr})) {
+                        for(auto &&rnode : dp[right].size() ? dp[right] : vector<TreeNode*>({nullptr})) {
                             TreeNode *root = new TreeNode(r);
                             root->left = lnode;
+                            root->right = helper(rnode, r);
                             temp.push_back(root);
-                        }
-                    }
-                    else {
-                        for(auto &&lnode : dp[left]) {
-                            for(auto &&rnode : dp[right]) {
-                                TreeNode *root = new TreeNode(r);
-                                root->left = lnode;
-                                root->right = helper(rnode, r, i);
-                                temp.push_back(root);
-                            }
                         }
                     }
                 }
@@ -55,11 +39,13 @@ public:
         }
     }
     
-    TreeNode *helper(TreeNode *model, int cur, int all) {
+    TreeNode *helper(TreeNode *model, int cur) {
+        if(!model) return nullptr;
+        
         TreeNode *temp = new TreeNode(model->val + cur);
         
-        if(model->left) temp->left = helper(model->left, cur, all);
-        if(model->right) temp->right = helper(model->right, cur, all);
+        if(model->left) temp->left = helper(model->left, cur);
+        if(model->right) temp->right = helper(model->right, cur);
         
         return temp;
     }

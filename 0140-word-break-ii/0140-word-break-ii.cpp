@@ -16,7 +16,7 @@ public:
         if(!isGone[cur]) {
             for(int i = 1; cur + i <= s.size(); i++) {
                 if(hash.count(s.substr(cur, i))) {
-                    auto temp = dfs(cur + i, s, hash, isGone, dp);
+                    vector<string> temp = dfs(cur + i, s, hash, isGone, dp);
                     
                     if(temp.size()) {
                         if(temp.front() == "find") {

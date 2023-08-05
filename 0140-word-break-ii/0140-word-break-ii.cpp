@@ -5,27 +5,24 @@ public:
         vector<bool> isGone(s.size());
         vector<vector<string>> dp(s.size());
         
-        return dfs(0, s, hash, isGone, dp); 
+        dfs(0, s, hash, isGone, dp);
+        return dp.front(); 
     }
     
-    vector<string> dfs(int cur, string &s, unordered_set<string> &hash, vector<bool> &isGone, vector<vector<string>> &dp) {
+    bool dfs(int cur, string &s, unordered_set<string> &hash, vector<bool> &isGone, vector<vector<string>> &dp) {
         if(cur == s.size()) {
-            return {"find"};
+            return true;
         }
         
         if(!isGone[cur]) {
             for(int i = 1; cur + i <= s.size(); i++) {
                 if(hash.count(s.substr(cur, i))) {
-                    vector<string> temp = dfs(cur + i, s, hash, isGone, dp);
-                    
-                    if(temp.size()) {
-                        if(temp.front() == "find") {
-                            dp[cur].push_back(s.substr(cur, i));
-                        }
-                        else {
-                            for(auto &&str: temp) {
-                                dp[cur].push_back(s.substr(cur, i) + ' ' + str);
-                            }
+                    if(cur + i == s.size()) {
+                        dp[cur].push_back(s.substr(cur, i));
+                    }
+                    else if(dfs(cur + i, s, hash, isGone, dp)) {
+                        for(auto &&str: dp[cur + i]) {
+                            dp[cur].push_back(s.substr(cur, i) + ' ' + str);
                         }
                     }
                 }
@@ -33,6 +30,6 @@ public:
         }
         
         isGone[cur] = true;
-        return dp[cur];
+        return dp[cur].size();
     }
 };

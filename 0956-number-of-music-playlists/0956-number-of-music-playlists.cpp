@@ -1,0 +1,19 @@
+class Solution {
+public:
+    long long solve(int n, int goal, int k, vector<vector<int>>& dp) {
+        if (n == 0 && goal == 0) return 1;
+        if (n == 0 || goal == 0) return 0;
+        if (dp[n][goal] == -1) {
+            long long pick = solve(n - 1, goal - 1, k, dp) * n;
+            long long notpick = solve(n, goal - 1, k, dp) * max(n - k, 0);
+            dp[n][goal] = (pick + notpick) % int(1e9 + 7);
+        }
+        
+        return dp[n][goal];
+    }
+
+    int numMusicPlaylists(int n, int goal, int k) {
+        vector<vector<int>> dp(n + 1, vector<int>(goal + 1, -1));
+        return solve(n, goal, k, dp);
+    }
+};

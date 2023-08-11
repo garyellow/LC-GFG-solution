@@ -1,11 +1,32 @@
 class Solution {
 public:
-    vector<vector<int>> dp;
-    int change(int amount, vector<int>& coins, int index = 0) {
-        if(dp.capacity() == 0) {
-            dp.resize(amount + 1, vector<int>(coins.size(), -1));
-        }
+    // vector<vector<int>> dp;
+    // int change(int amount, vector<int>& coins, int index = 0) {
+    //     if(dp.capacity() == 0) {
+    //         dp.resize(amount + 1, vector<int>(coins.size(), -1));
+    //     }
 
+    //     if(amount == 0) return 1;
+    //     if(amount < 0) return 0;
+
+    //     if(dp[amount][index] == -1) {
+    //         dp[amount][index] = 0;
+
+    //         for(int i = index; i < coins.size(); i++) {
+    //             dp[amount][index] += change(amount - coins[i], coins, i);
+    //         }
+    //     }
+
+    //     return dp[amount][index];
+    // }
+
+    int change(int amount, vector<int>& coins) {
+        vector<vector<int>> dp(amount + 1, vector<int>(coins.size(), -1));
+
+        return dfs(amount, 0, coins, dp);
+    }
+
+    int dfs(int amount, int index, vector<int>& coins, vector<vector<int>> &dp) {
         if(amount == 0) return 1;
         if(amount < 0) return 0;
 
@@ -13,10 +34,10 @@ public:
             dp[amount][index] = 0;
 
             for(int i = index; i < coins.size(); i++) {
-                dp[amount][index] += change(amount - coins[i], coins, i);
+                dp[amount][index] += dfs(amount - coins[i], i, coins, dp);
             }
         }
-        
+
         return dp[amount][index];
     }
 };

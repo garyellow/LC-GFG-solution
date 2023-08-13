@@ -19,7 +19,9 @@ public:
                 }
             }
 
-            if(cur + 2 < nums.size() && ((nums[cur] == nums[cur + 1] && nums[cur + 1] == nums[cur + 2]) || (nums[cur] + 1 == nums[cur + 1] && nums[cur + 1] + 1 == nums[cur + 2]))) {
+            if(cur + 2 < nums.size() && 
+            ((nums[cur] == nums[cur + 1] && nums[cur + 1] == nums[cur + 2]) || 
+            (nums[cur] + 1 == nums[cur + 1] && nums[cur + 1] + 1 == nums[cur + 2]))) {
                 if(helper(cur + 3, nums, isGone, dp)) {
                     return dp[cur] = true; 
                 }

@@ -4,7 +4,7 @@ public:
     
     Solution() {
         if(ans.size() == 1) {
-            int time = log2(1e5) + 1;
+            int time = ceil(log2(1e5));
 
             while(time--) {
                 vector<int> save(ans);

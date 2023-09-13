@@ -5,7 +5,7 @@ public:
         vector<int> index(ratings.size());
         iota(index.begin(), index.end(), 0);
 
-        stable_sort(index.begin(), index.end(), [&](auto &i, auto &j) {
+        sort(index.begin(), index.end(), [&](auto &i, auto &j) {
             return ratings[i] < ratings[j];
         });
 

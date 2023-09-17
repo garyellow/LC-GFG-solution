@@ -10,8 +10,6 @@ public:
             }
         }
         
-        cnt += nums.front() < cur;
-        
-        return cnt;
+        return cnt + 1;
     }
 };

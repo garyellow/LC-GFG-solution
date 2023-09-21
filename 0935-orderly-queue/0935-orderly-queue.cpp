@@ -8,7 +8,8 @@ public:
         
         string ans = s;
         for(int i = 1; i < s.size(); i++) {
-            ans = min(ans, s.substr(i) + s.substr(0, i));
+            rotate(s.begin(), s.begin() + 1, s.end());
+            ans = min(ans, s);
         }
 
         return ans;

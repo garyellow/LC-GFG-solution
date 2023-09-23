@@ -10,13 +10,9 @@ public:
                 string prev = word.substr(0, i) + word.substr(i + 1);
                 if (dp.count(prev)) {
                     dp[word] = max(dp[word], dp[prev] + 1);
-                    ans = max(ans, dp[word]);
                 }
             }
-        }
-
-        for(auto [a,b]:dp){
-            cout << a << ' ' << b << endl;
+            ans = max(ans, dp[word]);
         }
         return ans;
     }

@@ -3,10 +3,10 @@ public:
     char findTheDifference(string s, string t) {
         char check = 0;
         
-        for(const auto &i : t)
+        for(auto &&i : t)
             check ^= i;
         
-        for(const auto &i : s)
+        for(auto &&i : s)
             check ^= i;
         
         return check;

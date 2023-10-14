@@ -6,10 +6,10 @@ public:
 
         for (int i = 0; i < cost.size(); ++i) {
             for (int j = cost.size(); j > 0; --j) {
-                dp[j] = std::min(dp[j], dp[std::max(j - time[i] - 1, 0)] + cost[i]);
+                dp[j] = min(dp[j], dp[max(j - time[i] - 1, 0)] + cost[i]);
             }
         }
-        
+
         return dp[cost.size()];
     }
 

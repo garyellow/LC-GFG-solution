@@ -1,7 +1,6 @@
 class Solution {
 public:
-    Solution()
-    {
+    Solution() {
         if (dp.empty()) {
             dp.push_back({1});
 

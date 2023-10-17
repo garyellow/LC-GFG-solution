@@ -15,11 +15,11 @@ public:
                 in[rightChild[i]]++;
             }
         }
-        
+
         for(int i = 0; i < n; i++) u[i] = find(i, u);
         return unordered_set(u.begin(), u.end()).size() == 1 && 
         count(in.begin(), in.end(), 0) == 1 && 
-        count(in.begin(), in.end(), 2) == 0;
+        count_if(in.begin(), in.end(), [](auto &val) {return val > 1;}) == 0;
     }
 
     int find(int val, vector<int> &u) {

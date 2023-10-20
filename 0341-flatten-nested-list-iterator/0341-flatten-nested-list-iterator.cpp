@@ -29,18 +29,12 @@ public:
     int next() {
         if(cur && cur->hasNext()) return cur->next();
         return nestedList[index++].getInteger();
-        // if(temp.isInteger()) return temp.getInteger();
-        // cur = new NestedIterator(temp.getList());
-        // return cur->next();
     }
     
     bool hasNext() {
-        if(index == nestedList.size()) return cur && cur->hasNext();
-        while(!cur || !cur->hasNext() && index < nestedList.size()) {
-            NestedInteger &temp = nestedList[index];
-            if(temp.isInteger()) break;
-            cur = new NestedIterator(temp.getList());
-            index++;
+        while(index < nestedList.size() && !(cur && cur->hasNext())) {
+            if(nestedList[index].isInteger()) break;
+            cur = new NestedIterator(nestedList[index++].getList());
         }
         return index < nestedList.size() || cur && cur->hasNext();
     }

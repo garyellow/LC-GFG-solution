@@ -1,12 +1,8 @@
 class Solution {
 public:
     int maximumScore(vector<int>& nums, int k) {
-        for(int i = k, m = nums[k]; i >= 0; i--) {
-            m = nums[i] = min(m, nums[i]);
-        }
-        for(int i = k, m = nums[k]; i < nums.size(); i++) {
-            m = nums[i] = min(m, nums[i]);
-        }
+        for(int i = k, m = nums[k]; i >= 0; i--) m = nums[i] = min(m, nums[i]);
+        for(int i = k, m = nums[k]; i < nums.size(); i++) m = nums[i] = min(m, nums[i]);
 
         int ans = nums.size() * min(nums.front(), nums.back());
         for(int i = k, j = k; i != 0 || j != nums.size() - 1; ) {

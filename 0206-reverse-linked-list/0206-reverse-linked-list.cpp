@@ -11,21 +11,13 @@
 class Solution
 {
 public:
+    ListNode *prev = nullptr;
     ListNode *reverseList(ListNode *head)
     {
-        if(head == NULL || head->next == NULL)return head;
-        ListNode *last = head;
-        ListNode *now = head->next;
-        ListNode *next = now->next;
-        head->next = NULL;
-        while(next != NULL)
-        {
-            now->next = last;
-            last = now;
-            now = next;
-            next = next->next;
-        }
-        now->next = last;
-        return now;
+        if (!head) return prev;
+        auto temp = head->next;
+        head->next = prev;
+        prev = head;
+        return reverseList(temp);
     }
 };

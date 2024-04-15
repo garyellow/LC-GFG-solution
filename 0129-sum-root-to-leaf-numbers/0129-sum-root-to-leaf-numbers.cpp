@@ -18,6 +18,6 @@ public:
         sum += root->val;
         
         if(!root->left && !root->right) return sum;
-        else return sumNumbers(root->left, sum) + sumNumbers(root->right, sum);
+        return sumNumbers(root->left, sum) + sumNumbers(root->right, sum);
     }
 };

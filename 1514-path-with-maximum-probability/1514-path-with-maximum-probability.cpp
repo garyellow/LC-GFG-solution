@@ -10,7 +10,7 @@ public:
         }
 
         vector<double> dist(n, 0);
-        dist[start] = 1.0;
+        dist[start] = 1;
 
         queue<int> q;
         q.push(start);

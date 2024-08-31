@@ -11,25 +11,25 @@ public:
 
         vector<double> dist(n, 0);
         dist[start] = 1.0;
-        
+
         queue<int> q;
         q.push(start);
-        
+
         while (!q.empty()) {
             int curr = q.front();
             q.pop();
-            
-            for (auto &&x : adj[curr]) {
+
+            for (auto&& x : adj[curr]) {
                 auto [node, prob] = x;
                 double newProb = dist[curr] * prob;
-                
+
                 if (newProb > dist[node]) {
                     dist[node] = newProb;
                     q.push(node);
                 }
             }
         }
-        
+
         return dist[end];
     }
 };

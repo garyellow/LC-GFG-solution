@@ -28,14 +28,17 @@ public:
             visited++;
             for (int v : graph[u]) {
                 for (int i = 0; i < k; i++) {
-                    counts[v][i] = max(counts[v][i], counts[u][i] + (colors[v] - 'a' == i ? 1 : 0));
+                    counts[v][i] =
+                        max(counts[v][i],
+                            counts[u][i] + (colors[v] - 'a' == i ? 1 : 0));
                 }
                 indegrees[v]--;
                 if (indegrees[v] == 0) {
                     zero_indegree.insert(v);
                 }
             }
-            max_count = max(max_count, *max_element(counts[u].begin(), counts[u].end()));
+            max_count = max(max_count,
+                            *max_element(counts[u].begin(), counts[u].end()));
         }
         return visited == colors.size() ? max_count : -1;
     }

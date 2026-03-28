@@ -21,7 +21,7 @@ public:
             }
         }
         string res = "";
-        for (int c : A)
+        for (auto c : A)
             res += 'a' + c - 1;
         return res;
     }

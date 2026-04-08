@@ -1,4 +1,4 @@
-<h2><a href="https://leetcode.com/problems/maximum-value-at-a-given-index-in-a-bounded-array/">1802. Maximum Value at a Given Index in a Bounded Array</a></h2><h3>Medium</h3><hr><div><p>You are given three positive integers:&nbsp;<code>n</code>, <code>index</code>, and <code>maxSum</code>. You want to construct an array <code>nums</code> (<strong>0-indexed</strong>)<strong> </strong>that satisfies the following conditions:</p>
+<h2><a href="https://leetcode.com/problems/maximum-value-at-a-given-index-in-a-bounded-array">1802. Maximum Value at a Given Index in a Bounded Array</a></h2><h3>Medium</h3><hr><p>You are given three positive integers:&nbsp;<code>n</code>, <code>index</code>, and <code>maxSum</code>. You want to construct an array <code>nums</code> (<strong>0-indexed</strong>)<strong> </strong>that satisfies the following conditions:</p>
 
 <ul>
 	<li><code>nums.length == n</code></li>
@@ -15,7 +15,8 @@
 <p>&nbsp;</p>
 <p><strong class="example">Example 1:</strong></p>
 
-<pre><strong>Input:</strong> n = 4, index = 2,  maxSum = 6
+<pre>
+<strong>Input:</strong> n = 4, index = 2,  maxSum = 6
 <strong>Output:</strong> 2
 <strong>Explanation:</strong> nums = [1,2,<u><strong>2</strong></u>,1] is one array that satisfies all the conditions.
 There are no arrays that satisfy all the conditions and have nums[2] == 3, so 2 is the maximum nums[2].
@@ -23,7 +24,8 @@ There are no arrays that satisfy all the conditions and have nums[2] == 3, so 2 
 
 <p><strong class="example">Example 2:</strong></p>
 
-<pre><strong>Input:</strong> n = 6, index = 1,  maxSum = 10
+<pre>
+<strong>Input:</strong> n = 6, index = 1,  maxSum = 10
 <strong>Output:</strong> 3
 </pre>
 
@@ -34,4 +36,3 @@ There are no arrays that satisfy all the conditions and have nums[2] == 3, so 2 
 	<li><code>1 &lt;= n &lt;= maxSum &lt;= 10<sup>9</sup></code></li>
 	<li><code>0 &lt;= index &lt; n</code></li>
 </ul>
-</div>

@@ -39,6 +39,7 @@ Created using [LeetHub-3.0](https://github.com/raphaelheinz/LeetHub-3.0).
 | ------- | ------- |
 | [1536-minimum-swaps-to-arrange-a-binary-grid](https://github.com/garyellow/LC-GFG-solution/tree/main/1536-minimum-swaps-to-arrange-a-binary-grid/) | Medium |
 | [1727-largest-submatrix-with-rearrangements](https://github.com/garyellow/LC-GFG-solution/tree/main/1727-largest-submatrix-with-rearrangements/) | Medium |
+| [1802-maximum-value-at-a-given-index-in-a-bounded-array](https://github.com/garyellow/LC-GFG-solution/tree/main/1802-maximum-value-at-a-given-index-in-a-bounded-array/) | Medium |
 | [2573-find-the-string-with-lcp](https://github.com/garyellow/LC-GFG-solution/tree/main/2573-find-the-string-with-lcp/) | Hard |
 | [3296-minimum-number-of-seconds-to-make-mountain-height-zero](https://github.com/garyellow/LC-GFG-solution/tree/main/3296-minimum-number-of-seconds-to-make-mountain-height-zero/) | Medium |
 | [3474-lexicographically-smallest-generated-string](https://github.com/garyellow/LC-GFG-solution/tree/main/3474-lexicographically-smallest-generated-string/) | Hard |
@@ -133,12 +134,14 @@ Created using [LeetHub-3.0](https://github.com/raphaelheinz/LeetHub-3.0).
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [1622-fancy-sequence](https://github.com/garyellow/LC-GFG-solution/tree/main/1622-fancy-sequence/) | Hard |
+| [1802-maximum-value-at-a-given-index-in-a-bounded-array](https://github.com/garyellow/LC-GFG-solution/tree/main/1802-maximum-value-at-a-given-index-in-a-bounded-array/) | Medium |
 | [1878-get-biggest-three-rhombus-sums-in-a-grid](https://github.com/garyellow/LC-GFG-solution/tree/main/1878-get-biggest-three-rhombus-sums-in-a-grid/) | Medium |
 | [2946-matrix-similarity-after-cyclic-shifts](https://github.com/garyellow/LC-GFG-solution/tree/main/2946-matrix-similarity-after-cyclic-shifts/) | Easy |
 | [3296-minimum-number-of-seconds-to-make-mountain-height-zero](https://github.com/garyellow/LC-GFG-solution/tree/main/3296-minimum-number-of-seconds-to-make-mountain-height-zero/) | Medium |
 ## Binary Search
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [1802-maximum-value-at-a-given-index-in-a-bounded-array](https://github.com/garyellow/LC-GFG-solution/tree/main/1802-maximum-value-at-a-given-index-in-a-bounded-array/) | Medium |
 | [3296-minimum-number-of-seconds-to-make-mountain-height-zero](https://github.com/garyellow/LC-GFG-solution/tree/main/3296-minimum-number-of-seconds-to-make-mountain-height-zero/) | Medium |
 | [3661-maximum-walls-destroyed-by-robots](https://github.com/garyellow/LC-GFG-solution/tree/main/3661-maximum-walls-destroyed-by-robots/) | Hard |
 ## Heap (Priority Queue)

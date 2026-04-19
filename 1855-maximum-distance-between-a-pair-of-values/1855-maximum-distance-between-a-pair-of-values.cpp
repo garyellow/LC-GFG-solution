@@ -8,7 +8,6 @@ public:
             }
 
             if (i < nums1.size()) {
-                cout << j << ' ' << i << endl;
                 result = max(result, j - i);
             }
         }

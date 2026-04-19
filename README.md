@@ -18,6 +18,7 @@ Created using [LeetHub-3.0](https://github.com/raphaelheinz/LeetHub-3.0).
 | [1582-special-positions-in-a-binary-matrix](https://github.com/garyellow/LC-GFG-solution/tree/main/1582-special-positions-in-a-binary-matrix/) | Easy |
 | [1594-maximum-non-negative-product-in-a-matrix](https://github.com/garyellow/LC-GFG-solution/tree/main/1594-maximum-non-negative-product-in-a-matrix/) | Medium |
 | [1727-largest-submatrix-with-rearrangements](https://github.com/garyellow/LC-GFG-solution/tree/main/1727-largest-submatrix-with-rearrangements/) | Medium |
+| [1855-maximum-distance-between-a-pair-of-values](https://github.com/garyellow/LC-GFG-solution/tree/main/1855-maximum-distance-between-a-pair-of-values/) | Medium |
 | [1878-get-biggest-three-rhombus-sums-in-a-grid](https://github.com/garyellow/LC-GFG-solution/tree/main/1878-get-biggest-three-rhombus-sums-in-a-grid/) | Medium |
 | [1886-determine-whether-matrix-can-be-obtained-by-rotation](https://github.com/garyellow/LC-GFG-solution/tree/main/1886-determine-whether-matrix-can-be-obtained-by-rotation/) | Easy |
 | [1980-find-unique-binary-string](https://github.com/garyellow/LC-GFG-solution/tree/main/1980-find-unique-binary-string/) | Medium |
@@ -159,6 +160,7 @@ Created using [LeetHub-3.0](https://github.com/raphaelheinz/LeetHub-3.0).
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [1802-maximum-value-at-a-given-index-in-a-bounded-array](https://github.com/garyellow/LC-GFG-solution/tree/main/1802-maximum-value-at-a-given-index-in-a-bounded-array/) | Medium |
+| [1855-maximum-distance-between-a-pair-of-values](https://github.com/garyellow/LC-GFG-solution/tree/main/1855-maximum-distance-between-a-pair-of-values/) | Medium |
 | [3296-minimum-number-of-seconds-to-make-mountain-height-zero](https://github.com/garyellow/LC-GFG-solution/tree/main/3296-minimum-number-of-seconds-to-make-mountain-height-zero/) | Medium |
 | [3488-closest-equal-element-queries](https://github.com/garyellow/LC-GFG-solution/tree/main/3488-closest-equal-element-queries/) | Medium |
 | [3661-maximum-walls-destroyed-by-robots](https://github.com/garyellow/LC-GFG-solution/tree/main/3661-maximum-walls-destroyed-by-robots/) | Hard |
@@ -189,6 +191,7 @@ Created using [LeetHub-3.0](https://github.com/raphaelheinz/LeetHub-3.0).
 ## Two Pointers
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [1855-maximum-distance-between-a-pair-of-values](https://github.com/garyellow/LC-GFG-solution/tree/main/1855-maximum-distance-between-a-pair-of-values/) | Medium |
 | [3643-flip-square-submatrix-vertically](https://github.com/garyellow/LC-GFG-solution/tree/main/3643-flip-square-submatrix-vertically/) | Easy |
 ## Enumeration
 | Problem Name | Difficulty |

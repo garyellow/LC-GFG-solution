@@ -21,6 +21,6 @@ public:
             energy += task[0];
         }
 
-        return max({max_energy, sum_energy + min_diff_energy, runtime_energy});
+        return runtime_energy;
     }
 };

@@ -15,6 +15,7 @@ Created using [LeetHub-3.0](https://github.com/raphaelheinz/LeetHub-3.0).
 | ------- | ------- |
 | [0048-rotate-image](https://github.com/garyellow/LC-GFG-solution/tree/main/0048-rotate-image/) | Medium |
 | [0153-find-minimum-in-rotated-sorted-array](https://github.com/garyellow/LC-GFG-solution/tree/main/0153-find-minimum-in-rotated-sorted-array/) | Medium |
+| [0154-find-minimum-in-rotated-sorted-array-ii](https://github.com/garyellow/LC-GFG-solution/tree/main/0154-find-minimum-in-rotated-sorted-array-ii/) | Hard |
 | [0396-rotate-function](https://github.com/garyellow/LC-GFG-solution/tree/main/0396-rotate-function/) | Medium |
 | [0874-walking-robot-simulation](https://github.com/garyellow/LC-GFG-solution/tree/main/0874-walking-robot-simulation/) | Medium |
 | [1391-check-if-there-is-a-valid-path-in-a-grid](https://github.com/garyellow/LC-GFG-solution/tree/main/1391-check-if-there-is-a-valid-path-in-a-grid/) | Medium |
@@ -216,6 +217,7 @@ Created using [LeetHub-3.0](https://github.com/raphaelheinz/LeetHub-3.0).
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0153-find-minimum-in-rotated-sorted-array](https://github.com/garyellow/LC-GFG-solution/tree/main/0153-find-minimum-in-rotated-sorted-array/) | Medium |
+| [0154-find-minimum-in-rotated-sorted-array-ii](https://github.com/garyellow/LC-GFG-solution/tree/main/0154-find-minimum-in-rotated-sorted-array-ii/) | Hard |
 | [1802-maximum-value-at-a-given-index-in-a-bounded-array](https://github.com/garyellow/LC-GFG-solution/tree/main/1802-maximum-value-at-a-given-index-in-a-bounded-array/) | Medium |
 | [1855-maximum-distance-between-a-pair-of-values](https://github.com/garyellow/LC-GFG-solution/tree/main/1855-maximum-distance-between-a-pair-of-values/) | Medium |
 | [3296-minimum-number-of-seconds-to-make-mountain-height-zero](https://github.com/garyellow/LC-GFG-solution/tree/main/3296-minimum-number-of-seconds-to-make-mountain-height-zero/) | Medium |

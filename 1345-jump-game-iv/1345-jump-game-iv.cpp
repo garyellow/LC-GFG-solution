@@ -1,12 +1,11 @@
-class Solution
-{
+class Solution {
 public:
     queue<int> bfs = queue<int>({0});
     unordered_map<int, vector<int>> gate;
-    vector<bool> Is_gone = vector<bool>({true});
+    vector<bool> isGone = vector<bool>({true});
 
-    int minJumps(vector<int> &arr) {
-        Is_gone.resize(arr.size());
+    int minJumps(vector<int>& arr) {
+        isGone.resize(arr.size());
 
         for (int i = 0; i < arr.size(); i++)
             gate[arr[i]].push_back(i);
@@ -18,30 +17,37 @@ public:
                 int index = temp.front();
                 temp.pop();
                 bfs.pop();
-                
-                if(index - 1 >= 0 && !Is_gone[index - 1])
-                    bfs_push(index - 1, bfs);
 
-                if(index + 1 < arr.size())
-                    bfs_push(index + 1, bfs);
+                if (index - 1 >= 0 && !isGone[index - 1]) {
+                    if (!isGone[index - 1]) {
+                        bfs.push(index - 1);
+                        isGone[index - 1] = true;
+                    }
+                }
 
-                if(gate.count(arr[index])) {
-                    for(auto &&i : gate[arr[index]])
-                        bfs_push(i, bfs);
+                if (index + 1 < arr.size()) {
+                    if (!isGone[index + 1]) {
+                        bfs.push(index + 1);
+                        isGone[index + 1] = true;
+                    }
+                }
+
+                if (gate.count(arr[index])) {
+                    for (auto i : gate[arr[index]]) {
+                        if (!isGone[i]) {
+                            bfs.push(i);
+                            isGone[i] = true;
+                        }
+                    }
+
                     gate.erase(arr[index]);
                 }
 
-                if(Is_gone[arr.size() - 1]) return cnt;
+                if (isGone[arr.size() - 1])
+                    return cnt;
             }
         }
 
         return 0;
-    }
-
-    void bfs_push(const int &num, queue<int> &bfs) {
-        if (!Is_gone[num]) {
-            bfs.push(num);
-            Is_gone[num] = true;
-        }
     }
 };

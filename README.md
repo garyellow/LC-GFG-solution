@@ -258,6 +258,7 @@ Created using [LeetHub-3.0](https://github.com/raphaelheinz/LeetHub-3.0).
 | [0048-rotate-image](https://github.com/garyellow/LC-GFG-solution/tree/main/0048-rotate-image/) | Medium |
 | [0396-rotate-function](https://github.com/garyellow/LC-GFG-solution/tree/main/0396-rotate-function/) | Medium |
 | [0788-rotated-digits](https://github.com/garyellow/LC-GFG-solution/tree/main/0788-rotated-digits/) | Medium |
+| [1344-angle-between-hands-of-a-clock](https://github.com/garyellow/LC-GFG-solution/tree/main/1344-angle-between-hands-of-a-clock/) | Medium |
 | [1622-fancy-sequence](https://github.com/garyellow/LC-GFG-solution/tree/main/1622-fancy-sequence/) | Hard |
 | [1802-maximum-value-at-a-given-index-in-a-bounded-array](https://github.com/garyellow/LC-GFG-solution/tree/main/1802-maximum-value-at-a-given-index-in-a-bounded-array/) | Medium |
 | [1878-get-biggest-three-rhombus-sums-in-a-grid](https://github.com/garyellow/LC-GFG-solution/tree/main/1878-get-biggest-three-rhombus-sums-in-a-grid/) | Medium |

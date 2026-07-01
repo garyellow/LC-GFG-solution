@@ -89,6 +89,7 @@ Created using [LeetHub-3.0](https://github.com/raphaelheinz/LeetHub-3.0).
 | [3689-maximum-total-subarray-value-i](https://github.com/garyellow/LC-GFG-solution/tree/main/3689-maximum-total-subarray-value-i/) | Medium |
 | [3691-maximum-total-subarray-value-ii](https://github.com/garyellow/LC-GFG-solution/tree/main/3691-maximum-total-subarray-value-ii/) | Hard |
 | [3737-count-subarrays-with-majority-element-i](https://github.com/garyellow/LC-GFG-solution/tree/main/3737-count-subarrays-with-majority-element-i/) | Medium |
+| [3739-count-subarrays-with-majority-element-ii](https://github.com/garyellow/LC-GFG-solution/tree/main/3739-count-subarrays-with-majority-element-ii/) | Hard |
 | [3741-minimum-distance-between-three-equal-elements-ii](https://github.com/garyellow/LC-GFG-solution/tree/main/3741-minimum-distance-between-three-equal-elements-ii/) | Medium |
 | [3742-maximum-path-score-in-a-grid](https://github.com/garyellow/LC-GFG-solution/tree/main/3742-maximum-path-score-in-a-grid/) | Medium |
 | [3761-minimum-absolute-distance-between-mirror-pairs](https://github.com/garyellow/LC-GFG-solution/tree/main/3761-minimum-absolute-distance-between-mirror-pairs/) | Medium |
@@ -239,6 +240,7 @@ Created using [LeetHub-3.0](https://github.com/raphaelheinz/LeetHub-3.0).
 | [3548-equal-sum-grid-partition-ii](https://github.com/garyellow/LC-GFG-solution/tree/main/3548-equal-sum-grid-partition-ii/) | Hard |
 | [3629-minimum-jumps-to-reach-end-via-prime-teleportation](https://github.com/garyellow/LC-GFG-solution/tree/main/3629-minimum-jumps-to-reach-end-via-prime-teleportation/) | Medium |
 | [3737-count-subarrays-with-majority-element-i](https://github.com/garyellow/LC-GFG-solution/tree/main/3737-count-subarrays-with-majority-element-i/) | Medium |
+| [3739-count-subarrays-with-majority-element-ii](https://github.com/garyellow/LC-GFG-solution/tree/main/3739-count-subarrays-with-majority-element-ii/) | Hard |
 | [3741-minimum-distance-between-three-equal-elements-ii](https://github.com/garyellow/LC-GFG-solution/tree/main/3741-minimum-distance-between-three-equal-elements-ii/) | Medium |
 | [3761-minimum-absolute-distance-between-mirror-pairs](https://github.com/garyellow/LC-GFG-solution/tree/main/3761-minimum-absolute-distance-between-mirror-pairs/) | Medium |
 ## Backtracking
@@ -265,6 +267,7 @@ Created using [LeetHub-3.0](https://github.com/raphaelheinz/LeetHub-3.0).
 | [3548-equal-sum-grid-partition-ii](https://github.com/garyellow/LC-GFG-solution/tree/main/3548-equal-sum-grid-partition-ii/) | Hard |
 | [3699-number-of-zigzag-arrays-i](https://github.com/garyellow/LC-GFG-solution/tree/main/3699-number-of-zigzag-arrays-i/) | Hard |
 | [3737-count-subarrays-with-majority-element-i](https://github.com/garyellow/LC-GFG-solution/tree/main/3737-count-subarrays-with-majority-element-i/) | Medium |
+| [3739-count-subarrays-with-majority-element-ii](https://github.com/garyellow/LC-GFG-solution/tree/main/3739-count-subarrays-with-majority-element-ii/) | Hard |
 ## Bit Manipulation
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -329,6 +332,7 @@ Created using [LeetHub-3.0](https://github.com/raphaelheinz/LeetHub-3.0).
 | [3161-block-placement-queries](https://github.com/garyellow/LC-GFG-solution/tree/main/3161-block-placement-queries/) | Hard |
 | [3691-maximum-total-subarray-value-ii](https://github.com/garyellow/LC-GFG-solution/tree/main/3691-maximum-total-subarray-value-ii/) | Hard |
 | [3737-count-subarrays-with-majority-element-i](https://github.com/garyellow/LC-GFG-solution/tree/main/3737-count-subarrays-with-majority-element-i/) | Medium |
+| [3739-count-subarrays-with-majority-element-ii](https://github.com/garyellow/LC-GFG-solution/tree/main/3739-count-subarrays-with-majority-element-ii/) | Hard |
 ## Sorting
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -393,6 +397,7 @@ Created using [LeetHub-3.0](https://github.com/raphaelheinz/LeetHub-3.0).
 | [3653-xor-after-range-multiplication-queries-i](https://github.com/garyellow/LC-GFG-solution/tree/main/3653-xor-after-range-multiplication-queries-i/) | Medium |
 | [3655-xor-after-range-multiplication-queries-ii](https://github.com/garyellow/LC-GFG-solution/tree/main/3655-xor-after-range-multiplication-queries-ii/) | Hard |
 | [3737-count-subarrays-with-majority-element-i](https://github.com/garyellow/LC-GFG-solution/tree/main/3737-count-subarrays-with-majority-element-i/) | Medium |
+| [3739-count-subarrays-with-majority-element-ii](https://github.com/garyellow/LC-GFG-solution/tree/main/3739-count-subarrays-with-majority-element-ii/) | Hard |
 ## Depth-First Search
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -456,4 +461,5 @@ Created using [LeetHub-3.0](https://github.com/raphaelheinz/LeetHub-3.0).
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [3737-count-subarrays-with-majority-element-i](https://github.com/garyellow/LC-GFG-solution/tree/main/3737-count-subarrays-with-majority-element-i/) | Medium |
+| [3739-count-subarrays-with-majority-element-ii](https://github.com/garyellow/LC-GFG-solution/tree/main/3739-count-subarrays-with-majority-element-ii/) | Hard |
 <!---LeetCode Topics End-->

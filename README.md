@@ -19,6 +19,7 @@ Created using [LeetHub-3.0](https://github.com/raphaelheinz/LeetHub-3.0).
 | [0154-find-minimum-in-rotated-sorted-array-ii](https://github.com/garyellow/LC-GFG-solution/tree/main/0154-find-minimum-in-rotated-sorted-array-ii/) | Hard |
 | [0396-rotate-function](https://github.com/garyellow/LC-GFG-solution/tree/main/0396-rotate-function/) | Medium |
 | [0874-walking-robot-simulation](https://github.com/garyellow/LC-GFG-solution/tree/main/0874-walking-robot-simulation/) | Medium |
+| [1301-number-of-paths-with-max-score](https://github.com/garyellow/LC-GFG-solution/tree/main/1301-number-of-paths-with-max-score/) | Hard |
 | [1306-jump-game-iii](https://github.com/garyellow/LC-GFG-solution/tree/main/1306-jump-game-iii/) | Medium |
 | [1340-jump-game-v](https://github.com/garyellow/LC-GFG-solution/tree/main/1340-jump-game-v/) | Hard |
 | [1345-jump-game-iv](https://github.com/garyellow/LC-GFG-solution/tree/main/1345-jump-game-iv/) | Hard |
@@ -120,6 +121,7 @@ Created using [LeetHub-3.0](https://github.com/raphaelheinz/LeetHub-3.0).
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0048-rotate-image](https://github.com/garyellow/LC-GFG-solution/tree/main/0048-rotate-image/) | Medium |
+| [1301-number-of-paths-with-max-score](https://github.com/garyellow/LC-GFG-solution/tree/main/1301-number-of-paths-with-max-score/) | Hard |
 | [1391-check-if-there-is-a-valid-path-in-a-grid](https://github.com/garyellow/LC-GFG-solution/tree/main/1391-check-if-there-is-a-valid-path-in-a-grid/) | Medium |
 | [1536-minimum-swaps-to-arrange-a-binary-grid](https://github.com/garyellow/LC-GFG-solution/tree/main/1536-minimum-swaps-to-arrange-a-binary-grid/) | Medium |
 | [1559-detect-cycles-in-2d-grid](https://github.com/garyellow/LC-GFG-solution/tree/main/1559-detect-cycles-in-2d-grid/) | Medium |
@@ -197,6 +199,7 @@ Created using [LeetHub-3.0](https://github.com/raphaelheinz/LeetHub-3.0).
 | ------- | ------- |
 | [0396-rotate-function](https://github.com/garyellow/LC-GFG-solution/tree/main/0396-rotate-function/) | Medium |
 | [0788-rotated-digits](https://github.com/garyellow/LC-GFG-solution/tree/main/0788-rotated-digits/) | Medium |
+| [1301-number-of-paths-with-max-score](https://github.com/garyellow/LC-GFG-solution/tree/main/1301-number-of-paths-with-max-score/) | Hard |
 | [1320-minimum-distance-to-type-a-word-using-two-fingers](https://github.com/garyellow/LC-GFG-solution/tree/main/1320-minimum-distance-to-type-a-word-using-two-fingers/) | Hard |
 | [1340-jump-game-v](https://github.com/garyellow/LC-GFG-solution/tree/main/1340-jump-game-v/) | Hard |
 | [1594-maximum-non-negative-product-in-a-matrix](https://github.com/garyellow/LC-GFG-solution/tree/main/1594-maximum-non-negative-product-in-a-matrix/) | Medium |

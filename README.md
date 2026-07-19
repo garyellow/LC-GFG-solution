@@ -107,6 +107,7 @@ Created using [LeetHub-3.0](https://github.com/raphaelheinz/LeetHub-3.0).
 ## Greedy
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [1081-smallest-subsequence-of-distinct-characters](https://github.com/garyellow/LC-GFG-solution/tree/main/1081-smallest-subsequence-of-distinct-characters/) | Medium |
 | [1536-minimum-swaps-to-arrange-a-binary-grid](https://github.com/garyellow/LC-GFG-solution/tree/main/1536-minimum-swaps-to-arrange-a-binary-grid/) | Medium |
 | [1665-minimum-initial-energy-to-finish-tasks](https://github.com/garyellow/LC-GFG-solution/tree/main/1665-minimum-initial-energy-to-finish-tasks/) | Hard |
 | [1727-largest-submatrix-with-rearrangements](https://github.com/garyellow/LC-GFG-solution/tree/main/1727-largest-submatrix-with-rearrangements/) | Medium |
@@ -159,6 +160,7 @@ Created using [LeetHub-3.0](https://github.com/raphaelheinz/LeetHub-3.0).
 | ------- | ------- |
 | [0657-robot-return-to-origin](https://github.com/garyellow/LC-GFG-solution/tree/main/0657-robot-return-to-origin/) | Easy |
 | [0796-rotate-string](https://github.com/garyellow/LC-GFG-solution/tree/main/0796-rotate-string/) | Easy |
+| [1081-smallest-subsequence-of-distinct-characters](https://github.com/garyellow/LC-GFG-solution/tree/main/1081-smallest-subsequence-of-distinct-characters/) | Medium |
 | [1320-minimum-distance-to-type-a-word-using-two-fingers](https://github.com/garyellow/LC-GFG-solution/tree/main/1320-minimum-distance-to-type-a-word-using-two-fingers/) | Hard |
 | [1358-number-of-substrings-containing-all-three-characters](https://github.com/garyellow/LC-GFG-solution/tree/main/1358-number-of-substrings-containing-all-three-characters/) | Medium |
 | [1415-the-k-th-lexicographical-string-of-all-happy-strings-of-length-n](https://github.com/garyellow/LC-GFG-solution/tree/main/1415-the-k-th-lexicographical-string-of-all-happy-strings-of-length-n/) | Medium |
@@ -433,6 +435,7 @@ Created using [LeetHub-3.0](https://github.com/raphaelheinz/LeetHub-3.0).
 ## Stack
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [1081-smallest-subsequence-of-distinct-characters](https://github.com/garyellow/LC-GFG-solution/tree/main/1081-smallest-subsequence-of-distinct-characters/) | Medium |
 | [2130-maximum-twin-sum-of-a-linked-list](https://github.com/garyellow/LC-GFG-solution/tree/main/2130-maximum-twin-sum-of-a-linked-list/) | Medium |
 | [2751-robot-collisions](https://github.com/garyellow/LC-GFG-solution/tree/main/2751-robot-collisions/) | Hard |
 ## Divide and Conquer
@@ -536,4 +539,8 @@ Created using [LeetHub-3.0](https://github.com/raphaelheinz/LeetHub-3.0).
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [3312-sorted-gcd-pair-queries](https://github.com/garyellow/LC-GFG-solution/tree/main/3312-sorted-gcd-pair-queries/) | Hard |
+## Monotonic Stack
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [1081-smallest-subsequence-of-distinct-characters](https://github.com/garyellow/LC-GFG-solution/tree/main/1081-smallest-subsequence-of-distinct-characters/) | Medium |
 <!---LeetCode Topics End-->

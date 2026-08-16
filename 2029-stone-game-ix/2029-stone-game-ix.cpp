@@ -1,10 +1,8 @@
-class Solution
-{
+class Solution {
 public:
-    bool stoneGameIX(vector<int> &stones)
-    {
+    bool stoneGameIX(vector<int>& stones) {
         vector<int> cnt(3);
-        for (auto &&i : stones)
+        for (auto i : stones)
             cnt[i % 3]++;
 
         if (min(cnt[1], cnt[2]) == 0)

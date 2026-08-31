@@ -608,6 +608,7 @@ Created using [LeetHub-3.0](https://github.com/raphaelheinz/LeetHub-3.0).
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0061-rotate-list](https://github.com/garyellow/LC-GFG-solution/tree/main/0061-rotate-list/) | Medium |
+| [2058-find-the-minimum-and-maximum-number-of-nodes-between-critical-points](https://github.com/garyellow/LC-GFG-solution/tree/main/2058-find-the-minimum-and-maximum-number-of-nodes-between-critical-points/) | Medium |
 | [2095-delete-the-middle-node-of-a-linked-list](https://github.com/garyellow/LC-GFG-solution/tree/main/2095-delete-the-middle-node-of-a-linked-list/) | Medium |
 | [2130-maximum-twin-sum-of-a-linked-list](https://github.com/garyellow/LC-GFG-solution/tree/main/2130-maximum-twin-sum-of-a-linked-list/) | Medium |
 ## Number Theory

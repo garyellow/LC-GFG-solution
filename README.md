@@ -130,6 +130,7 @@ Created using [LeetHub-3.0](https://github.com/raphaelheinz/LeetHub-3.0).
 | [3761-minimum-absolute-distance-between-mirror-pairs](https://github.com/garyellow/LC-GFG-solution/tree/main/3761-minimum-absolute-distance-between-mirror-pairs/) | Medium |
 | [3838-weighted-word-mapping](https://github.com/garyellow/LC-GFG-solution/tree/main/3838-weighted-word-mapping/) | Easy |
 | [3867-sum-of-gcd-of-formed-pairs](https://github.com/garyellow/LC-GFG-solution/tree/main/3867-sum-of-gcd-of-formed-pairs/) | Medium |
+| [3875-construct-uniform-parity-array-i](https://github.com/garyellow/LC-GFG-solution/tree/main/3875-construct-uniform-parity-array-i/) | Easy |
 ## Greedy
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -431,6 +432,7 @@ Created using [LeetHub-3.0](https://github.com/raphaelheinz/LeetHub-3.0).
 | [3761-minimum-absolute-distance-between-mirror-pairs](https://github.com/garyellow/LC-GFG-solution/tree/main/3761-minimum-absolute-distance-between-mirror-pairs/) | Medium |
 | [3783-mirror-distance-of-an-integer](https://github.com/garyellow/LC-GFG-solution/tree/main/3783-mirror-distance-of-an-integer/) | Easy |
 | [3867-sum-of-gcd-of-formed-pairs](https://github.com/garyellow/LC-GFG-solution/tree/main/3867-sum-of-gcd-of-formed-pairs/) | Medium |
+| [3875-construct-uniform-parity-array-i](https://github.com/garyellow/LC-GFG-solution/tree/main/3875-construct-uniform-parity-array-i/) | Easy |
 ## Binary Search
 | Problem Name | Difficulty |
 | ------- | ------- |

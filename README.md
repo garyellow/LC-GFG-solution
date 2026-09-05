@@ -133,6 +133,7 @@ Created using [LeetHub-3.0](https://github.com/raphaelheinz/LeetHub-3.0).
 | [3875-construct-uniform-parity-array-i](https://github.com/garyellow/LC-GFG-solution/tree/main/3875-construct-uniform-parity-array-i/) | Easy |
 | [3876-construct-uniform-parity-array-ii](https://github.com/garyellow/LC-GFG-solution/tree/main/3876-construct-uniform-parity-array-ii/) | Medium |
 | [3903-smallest-stable-index-i](https://github.com/garyellow/LC-GFG-solution/tree/main/3903-smallest-stable-index-i/) | Easy |
+| [3904-smallest-stable-index-ii](https://github.com/garyellow/LC-GFG-solution/tree/main/3904-smallest-stable-index-ii/) | Medium |
 ## Greedy
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -376,6 +377,7 @@ Created using [LeetHub-3.0](https://github.com/raphaelheinz/LeetHub-3.0).
 | [3739-count-subarrays-with-majority-element-ii](https://github.com/garyellow/LC-GFG-solution/tree/main/3739-count-subarrays-with-majority-element-ii/) | Hard |
 | [3756-concatenate-non-zero-digits-and-multiply-by-sum-ii](https://github.com/garyellow/LC-GFG-solution/tree/main/3756-concatenate-non-zero-digits-and-multiply-by-sum-ii/) | Medium |
 | [3903-smallest-stable-index-i](https://github.com/garyellow/LC-GFG-solution/tree/main/3903-smallest-stable-index-i/) | Easy |
+| [3904-smallest-stable-index-ii](https://github.com/garyellow/LC-GFG-solution/tree/main/3904-smallest-stable-index-ii/) | Medium |
 ## Bit Manipulation
 | Problem Name | Difficulty |
 | ------- | ------- |

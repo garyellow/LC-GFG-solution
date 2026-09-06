@@ -199,6 +199,7 @@ Created using [LeetHub-3.0](https://github.com/raphaelheinz/LeetHub-3.0).
 ## String
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0115-distinct-subsequences](https://github.com/garyellow/LC-GFG-solution/tree/main/0115-distinct-subsequences/) | Hard |
 | [0657-robot-return-to-origin](https://github.com/garyellow/LC-GFG-solution/tree/main/0657-robot-return-to-origin/) | Easy |
 | [0796-rotate-string](https://github.com/garyellow/LC-GFG-solution/tree/main/0796-rotate-string/) | Easy |
 | [1081-smallest-subsequence-of-distinct-characters](https://github.com/garyellow/LC-GFG-solution/tree/main/1081-smallest-subsequence-of-distinct-characters/) | Medium |
@@ -265,6 +266,7 @@ Created using [LeetHub-3.0](https://github.com/raphaelheinz/LeetHub-3.0).
 ## Dynamic Programming
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0115-distinct-subsequences](https://github.com/garyellow/LC-GFG-solution/tree/main/0115-distinct-subsequences/) | Hard |
 | [0396-rotate-function](https://github.com/garyellow/LC-GFG-solution/tree/main/0396-rotate-function/) | Medium |
 | [0486-predict-the-winner](https://github.com/garyellow/LC-GFG-solution/tree/main/0486-predict-the-winner/) | Medium |
 | [0788-rotated-digits](https://github.com/garyellow/LC-GFG-solution/tree/main/0788-rotated-digits/) | Medium |

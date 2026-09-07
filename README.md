@@ -202,6 +202,7 @@ Created using [LeetHub-3.0](https://github.com/raphaelheinz/LeetHub-3.0).
 | [0115-distinct-subsequences](https://github.com/garyellow/LC-GFG-solution/tree/main/0115-distinct-subsequences/) | Hard |
 | [0657-robot-return-to-origin](https://github.com/garyellow/LC-GFG-solution/tree/main/0657-robot-return-to-origin/) | Easy |
 | [0796-rotate-string](https://github.com/garyellow/LC-GFG-solution/tree/main/0796-rotate-string/) | Easy |
+| [0940-distinct-subsequences-ii](https://github.com/garyellow/LC-GFG-solution/tree/main/0940-distinct-subsequences-ii/) | Hard |
 | [1081-smallest-subsequence-of-distinct-characters](https://github.com/garyellow/LC-GFG-solution/tree/main/1081-smallest-subsequence-of-distinct-characters/) | Medium |
 | [1320-minimum-distance-to-type-a-word-using-two-fingers](https://github.com/garyellow/LC-GFG-solution/tree/main/1320-minimum-distance-to-type-a-word-using-two-fingers/) | Hard |
 | [1358-number-of-substrings-containing-all-three-characters](https://github.com/garyellow/LC-GFG-solution/tree/main/1358-number-of-substrings-containing-all-three-characters/) | Medium |
@@ -271,6 +272,7 @@ Created using [LeetHub-3.0](https://github.com/raphaelheinz/LeetHub-3.0).
 | [0486-predict-the-winner](https://github.com/garyellow/LC-GFG-solution/tree/main/0486-predict-the-winner/) | Medium |
 | [0788-rotated-digits](https://github.com/garyellow/LC-GFG-solution/tree/main/0788-rotated-digits/) | Medium |
 | [0877-stone-game](https://github.com/garyellow/LC-GFG-solution/tree/main/0877-stone-game/) | Medium |
+| [0940-distinct-subsequences-ii](https://github.com/garyellow/LC-GFG-solution/tree/main/0940-distinct-subsequences-ii/) | Hard |
 | [1140-stone-game-ii](https://github.com/garyellow/LC-GFG-solution/tree/main/1140-stone-game-ii/) | Medium |
 | [1301-number-of-paths-with-max-score](https://github.com/garyellow/LC-GFG-solution/tree/main/1301-number-of-paths-with-max-score/) | Hard |
 | [1320-minimum-distance-to-type-a-word-using-two-fingers](https://github.com/garyellow/LC-GFG-solution/tree/main/1320-minimum-distance-to-type-a-word-using-two-fingers/) | Hard |
